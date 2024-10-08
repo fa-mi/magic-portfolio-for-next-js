@@ -134,7 +134,7 @@ export default function About() {
                         fillWidth minHeight="160"
                         direction="column" justifyContent="center"
                         marginBottom="32">
-                        {about.calendar.display && (
+                        {/* {about.calendar.display && (
                             <Flex
                                 className={styles.blockAlign}
                                 style={{
@@ -160,7 +160,7 @@ export default function About() {
                                     variant="tertiary"
                                     icon="chevronRight"/>
                             </Flex>
-                        )}
+                        )} */}
                         <Heading
                             className={styles.textAlign}
                             variant="display-strong-xl">
