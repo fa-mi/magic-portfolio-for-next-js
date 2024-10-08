@@ -7,7 +7,7 @@ const person = {
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Software Engineer',
+    role:      'IT Enthusiast',
     avatar:    '/images/avatar.jpg',
     location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
@@ -47,8 +47,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Software Engineer</>,
-    subline: <>I'm Fahmi, a software engineer, where I craft intuitive applications. After hours, I build my own projects.</>
+    headline: <>{person.role}</>,
+    subline: <>I'm Fahmi, a {person.role}, where I craft intuitive applications. After hours, I build my own projects.</>
 }
 
 const about = {
@@ -71,8 +71,8 @@ const about = {
         title: 'Introduction',
         description: 
         <>
-            <p>Fahmi is a Jakarta-based software engineer with a passion for transforming complex challenges into simple, comprehensive solutions. His work spans digital interfaces, interactive experiences, and the convergence of design and technology.</p>
-            <p>My work spans a diverse range of disciplines, from crafting <Link href="/work">intuitive digital interfaces</Link> to designing immersive interactive experiences. I’m particularly interested in the intersection of analyst and engineering, where technology meet functionality. I believe that the best solutions arise from a balance of creativity and technical rigor, and I enjoy the challenge of finding that balance in every project I undertake.</p>
+            <p>Fahmi is a Jakarta-based {person.role} with a passion for transforming complex challenges into simple, comprehensive solutions. His work spans digital interfaces, interactive experiences, and the convergence of design and technology.</p>
+            <p>My work spans a diverse range of disciplines, from crafting intuitive digital interfaces to designing immersive interactive experiences. I’m particularly interested in the intersection of analyst and engineering, where technology meet functionality. I believe that the best solutions arise from a balance of creativity and technical rigor, and I enjoy the challenge of finding that balance in every project I undertake.</p>
         </>
     },
     work: {
