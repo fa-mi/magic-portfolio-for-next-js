@@ -22,9 +22,9 @@ const social = [
     // Links are automatically displayed.
     // Import new icons in /once-ui/icons.ts
     {
-        name: 'GitHub',
-        icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        name: 'Instagram',
+        icon: 'instagram',
+        link: 'https://www.instagram.com/fahmi.aquinas',
     },
     {
         name: 'LinkedIn',
@@ -76,7 +76,7 @@ const about = {
         </>
     },
     work: {
-        display: false, // set to false to hide this section
+        display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
@@ -108,7 +108,7 @@ const about = {
         ]
     },
     studies: {
-        display: false, // set to false to hide this section
+        display: true, // set to false to hide this section
         title: 'Studies',
         institutions: [
             {
@@ -122,33 +122,40 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'SQL',
+                description: <>Able to transform business idea into an efficient database.</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
+                        src: '/images/projects/skill/schema_db.png',
+                        alt: 'schema_db',
                         width: 16,
                         height: 9
                     },
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+                title: 'Data Visulization',
+                description: <>Able to transform raw data into meaningful insights.</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
+                        src: '/images/projects/skill/data-viz1.PNG',
+                        alt: 'data-visulization',
                         width: 16,
                         height: 9
                     },
+                    {
+                        src: '/images/projects/skill/data-viz2.PNG',
+                        alt: 'data-visulization',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
+            {
+                title: 'SAP',
+                description: <>Facilitating the implementation and support of SAP modules to enhance client business functionality and overall performance, 
+                while maintaining a high level of customer needs. </>,
+                images: [
                 ]
             }
         ]
