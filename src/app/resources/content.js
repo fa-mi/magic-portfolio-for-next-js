@@ -48,8 +48,7 @@ const home = {
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
     headline: <>Welcome to my site!</>,
-    subline: <>I'm Fahmi, a {person.role}, where I craft intuitive applications. After hours, I build the projects on my own or with help from my teammates.</>,
-    content: <>As you can see</>
+    subline: <>Explore my work, skills, and passion for creating innovative solutions.</>,
 }
 
 const about = {
@@ -85,10 +84,11 @@ const about = {
                 timeframe: '2022 - Present',
                 role: 'Junior Manager',
                 achievements: [
-                    <>NFC Payment using Tokenize Card Transaction Technology</>,
+                    <>NFC Payment using Tokenize Card Technology</>,
                     <>Channel Card Activation</>,
                     <>Third Party Card Inventory</>,
-                    <>Dynamic Currency Matching between Card</>,
+                    <>Dynamic Currency Matching</>,
+                    <>Card Management System</>,
                     <>Reengineering Business Process Card Production</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
@@ -98,11 +98,29 @@ const about = {
                         width: 16,
                         height: 9
                     },
+                    {
+                        src: '/images/projects/work/bri/cams.png',
+                        alt: 'CAMS',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/umi1.png',
+                        alt: 'Inventory Third Party',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/umi2.png',
+                        alt: 'Inventory Third Party',
+                        width: 16,
+                        height: 9
+                    },
                     
                 ]
             },
             {
-                company: 'PT. Bank Mandiri tbk',
+                company: 'PT. Bank Mandiri Tbk',
                 timeframe: '2021 - 2022',
                 role: 'Backend Developer',
                 achievements: [
@@ -118,7 +136,7 @@ const about = {
                  ]
             },
             {
-                company: 'PT. Trias Sentosa tbk',
+                company: 'PT. Trias Sentosa Tbk',
                 timeframe: '2020 - 2021',
                 role: 'IT Developer',
                 achievements: [
@@ -147,17 +165,18 @@ const about = {
         institutions: [
             {
                 name: 'University of Brawijaya',
+                timeframe: '2015 - 2019',
                 description: <>Studied computer science.</>,
             },
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
+        display: false, // set to false to hide this section
         title: 'Technical skills',
         skills: [
             {
                 title: 'SQL',
-                description: <>Able to transform business idea into an efficient database.</>,
+                description: <>Proficient in designing and optimizing databases to transform business requirements into efficient, scalable data structures. Experienced in writing complex queries, managing relational databases, and ensuring data integrity to support business operations.</>,
                 images: [
                     {
                         src: '/images/projects/skill/schema_db.png',
@@ -168,8 +187,8 @@ const about = {
                 ]
             },
             {
-                title: 'Data Visulization',
-                description: <>Able to transform raw data into meaningful insights.</>,
+                title: 'Business Intelligence',
+                description: <>Skilled in transforming raw data into actionable insights, leveraging advanced analytics and comprehensive data warehousing solutions. Experienced in identifying key trends and providing data-driven recommendations to support strategic decision-making and business growth.</>,
                 images: [
                     {
                         src: '/images/projects/skill/data-viz1.PNG',
@@ -186,11 +205,101 @@ const about = {
                 ]
             },
             {
+                title: 'Machine Learning',
+                description: <>Proficient in building and deploying machine learning models to analyze complex datasets and uncover actionable insights. Experienced in applying advanced algorithms to identify patterns, predict trends, and support data-driven decision-making, helping businesses optimize operations and drive innovation.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/ml.png',
+                        alt: 'machine-learning',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
                 title: 'SAP',
                 description: <>Facilitating the implementation and support of SAP modules to enhance client business functionality and overall performance, 
                 while maintaining a high level of customer needs. </>,
                 images: []
-            }
+            },
+            {
+                title: 'Figma',
+                description: <>Skilled in designing and prototyping with Figma, creating user-centered designs that align with business goals. Experienced in transforming complex processes into visually appealing and functional interfaces to enhance user engagement and drive customer acquisition.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/figma1.png',
+                        alt: 'barbershop',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/figma2.png',
+                        alt: 'iCinema',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/figma3.png',
+                        alt: 'iCinema',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/figma4.png',
+                        alt: 'iCinema',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/figma5.png',
+                        alt: 'rent bike',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
+                title: 'Flutter',
+                description: <>Proficient in Flutter development, skilled in building responsive and intuitive mobile applications. Experienced in transforming business needs into seamless user experiences, leveraging Flutter’s rich UI capabilities to deliver high-performance, cross-platform apps.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/flutter1.png',
+                        alt: 'flutix',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/flutter2.png',
+                        alt: 'flutix',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/flutter3.png',
+                        alt: 'flutix',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
+                title: 'Full Stack',
+                description: <>Versatile Full Stack developer with expertise in both front-end and back-end technologies. Skilled in building dynamic, scalable web applications, with a strong focus on delivering seamless user experiences and robust server-side functionality. Proficient in modern frameworks, databases, and cloud services to create end-to-end solutions that drive business growth.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/front-end.jpg',
+                        alt: 'ayocpns website',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/back-end.png',
+                        alt: 'lodz api',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
         ]
     }
 }

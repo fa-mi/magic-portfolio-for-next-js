@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { Heading, Flex, Text, Button,  Avatar, RevealFx } from '@/once-ui/components';
+import { Heading, Flex, Text, Button,  Avatar, RevealFx, SmartImage } from '@/once-ui/components';
 import { Projects } from '@/app/work/components/Projects';
 
-import { about, baseURL, home, newsletter, person, routes } from '@/app/resources'
+import { about, baseURL, home, newsletter, person, routes, } from '@/app/resources'
 import { Posts } from '@/app/blog/components/Posts';
 
 export function generateMetadata() {
@@ -105,27 +105,62 @@ export default function Home() {
 								</Flex>
 							</Button>
 						</RevealFx>
-						<RevealFx translateY="8" delay={0.6}>
-							<Text
-								wrap="balance"
-								onBackground="neutral-medium"
-								variant="label-strong-m">
-								{home.content}
-							</Text>
-						</RevealFx>
 					</Flex>
-				
 			</Flex>
-			{/* <RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]}/>
-			</RevealFx> */}
-			{/* {routes['/blog'] && (
-				<Flex fillWidth paddingX="20">
-					<Posts range={[1,2]} columns="2"/>
-				</Flex>
-			)}
-			<Projects range={[2]}/> */}
-			
+
+			{ !about.technical.display && (
+                        <>
+							<RevealFx translateY="12" delay={0.6}>
+								<Heading
+									as="h2"
+									variant="display-strong-s" marginBottom="40">
+									Skill & Expertise
+								</Heading>
+							</RevealFx>
+                            <Flex
+                                direction="column"
+                                fillWidth gap="l">
+                                {about.technical.skills.map((skill, index) => (
+                                    <Flex
+                                        key={`${skill}-${index}`}
+                                        fillWidth gap="4"
+                                        direction="column">
+											<Text
+												variant="heading-strong-l">
+												{skill.title}
+											</Text>
+											<Text
+												variant="body-default-m"
+												onBackground="neutral-weak">
+												{skill.description}
+											</Text>
+											{skill.images.length > 0 && (
+												<Flex
+													fillWidth paddingTop="m" gap="12"
+													wrap>
+													{skill.images.map((image, index) => (
+															<Flex
+															key={index}
+															border="neutral-medium"
+															borderStyle="solid-1"
+															radius="m"
+															minWidth={image.width} height={image.height}>
+															<SmartImage
+																enlarge
+																radius="m"
+																sizes={image.width.toString()}
+																alt={image.alt}
+																isLoading = {false}
+																src={image.src}/>
+															</Flex>
+													))}
+												</Flex>
+											)}
+                                    </Flex>
+                                ))}
+                            </Flex>
+                        </>
+                    )}
 		</Flex>
 	);
 }
