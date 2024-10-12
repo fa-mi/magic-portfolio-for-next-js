@@ -47,8 +47,9 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>{person.role}</>,
-    subline: <>I'm Fahmi, a {person.role}, where I craft intuitive applications. After hours, I build my own projects.</>
+    headline: <>Welcome to my site!</>,
+    subline: <>I'm Fahmi, a {person.role}, where I craft intuitive applications. After hours, I build the projects on my own or with help from my teammates.</>,
+    content: <>As you can see</>
 }
 
 const about = {
@@ -71,8 +72,8 @@ const about = {
         title: 'Introduction',
         description: 
         <>
-            <p>Fahmi is a Jakarta-based {person.role} with a passion for transforming complex challenges into simple, comprehensive solutions. His work spans digital interfaces, interactive experiences, and the convergence of design and technology.</p>
-            <p>My work spans a diverse range of disciplines, from crafting intuitive digital interfaces to designing immersive interactive experiences. I’m particularly interested in the intersection of analyst and engineering, where technology meet functionality. I believe that the best solutions arise from a balance of creativity and technical rigor, and I enjoy the challenge of finding that balance in every project I undertake.</p>
+            <p>Fahmi is a Jakarta-based {person.role} with a passion for transforming <b> complex business requirements</b> challenges into <b>simple and comprehensive solutions</b>. His work spans digital interfaces, interactive experiences, and the convergence of design and technology.</p>
+            <p>My work spans a diverse range of disciplines, from crafting intuitive digital interfaces to analyzing <b>business process</b> able to meets <b>customers needs</b>. I’m particularly interested in the intersection of <b>analysis</b> and <b>engineering</b>, where technology meet functionality. I believe that the best solutions arise from a balance of creativity and technical rigor, and I enjoy the challenge of finding that balance in every project I undertake.</p>
         </>
     },
     work: {
@@ -80,30 +81,63 @@ const about = {
         title: 'Work Experience',
         experiences: [
             {
-                company: 'BRI',
+                company: 'PT. Bank Rakyat Indonesia Tbk',
                 timeframe: '2022 - Present',
                 role: 'Junior Manager',
                 achievements: [
-                    <>Tokenize Card Transaction</>,
+                    <>NFC Payment using Tokenize Card Transaction Technology</>,
+                    <>Channel Card Activation</>,
+                    <>Third Party Card Inventory</>,
+                    <>Dynamic Currency Matching between Card</>,
                     <>Reengineering Business Process Card Production</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
+                        src: '/images/projects/work/bri/cardpro.png',
+                        alt: 'Cardpro',
                         width: 16,
                         height: 9
-                    }
+                    },
+                    
                 ]
             },
             {
-                company: 'Bank Mandiri',
+                company: 'PT. Bank Mandiri tbk',
                 timeframe: '2021 - 2022',
                 role: 'Backend Developer',
                 achievements: [
                     <>Developed a feature card virtual in super apps livin' By Mandiri.</>
                 ],
-                images: [ ]
+                images: [
+                    {
+                        src: '/images/projects/work/mandiri/virtual-card.jpeg',
+                        alt: 'Virtual Card',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
+                company: 'PT. Trias Sentosa tbk',
+                timeframe: '2020 - 2021',
+                role: 'IT Developer',
+                achievements: [
+                    <>Developed a applications based on business requirements using SAP framework.</>
+                ],
+                images: [ 
+                    {
+                        src: '/images/projects/work/trias/zolap.png',
+                        alt: 'SAP tcode application',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/trias/hr-home.png',
+                        alt: 'SAP HR application',
+                        width: 16,
+                        height: 9
+                    },
+                ]
             }
         ]
     },

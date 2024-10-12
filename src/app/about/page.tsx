@@ -253,7 +253,7 @@ export default function About() {
                                         </Flex>
                                         {experience.images.length > 0 && (
                                             <Flex
-                                                fillWidth paddingTop="m" paddingLeft="40"
+                                                fillWidth paddingTop="m" gap="12"
                                                 wrap>
                                                 {experience.images.map((image, index) => (
                                                     <Flex

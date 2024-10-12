@@ -1,7 +1,7 @@
 const baseURL = 'nextjs-portfolio.up.railway.app'
 
 const routes = {
-    '/':        false,
+    '/':        true,
     '/about':   true,
     '/work':    false,
     '/blog':    false,
@@ -17,7 +17,7 @@ const protectedRoutes = {
 const effects = {
     gradient: true,
     dots:     false,
-    lines:    false,
+    lines:    true,
 }
 
 const style = {
