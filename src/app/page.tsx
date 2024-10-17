@@ -117,48 +117,50 @@ export default function Home() {
 									Skill & Expertise
 								</Heading>
 							</RevealFx>
-                            <Flex
-                                direction="column"
-                                fillWidth gap="l">
-                                {about.technical.skills.map((skill, index) => (
-                                    <Flex
-                                        key={`${skill}-${index}`}
-                                        fillWidth gap="4"
-                                        direction="column">
-											<Text
-												variant="heading-strong-l">
-												{skill.title}
-											</Text>
-											<Text
-												variant="body-default-m"
-												onBackground="neutral-weak">
-												{skill.description}
-											</Text>
-											{skill.images.length > 0 && (
-												<Flex
-													fillWidth paddingTop="m" gap="12"
-													wrap>
-													{skill.images.map((image, index) => (
-															<Flex
-															key={index}
-															border="neutral-medium"
-															borderStyle="solid-1"
-															radius="m"
-															minWidth={image.width} height={image.height}>
-															<SmartImage
-																enlarge
+							<RevealFx translateY="16" delay={0.8}>
+								<Flex
+									direction="column"
+									fillWidth gap="l">
+									{about.technical.skills.map((skill, index) => (
+										<Flex
+											key={`${skill}-${index}`}
+											fillWidth gap="4"
+											direction="column">
+												<Text
+													variant="heading-strong-l">
+													{skill.title}
+												</Text>
+												<Text
+													variant="body-default-m"
+													onBackground="neutral-weak">
+													{skill.description}
+												</Text>
+												{skill.images.length > 0 && (
+													<Flex
+														fillWidth paddingTop="m" gap="12"
+														wrap>
+														{skill.images.map((image, index) => (
+																<Flex
+																key={index}
+																border="neutral-medium"
+																borderStyle="solid-1"
 																radius="m"
-																sizes={image.width.toString()}
-																alt={image.alt}
-																isLoading = {false}
-																src={image.src}/>
-															</Flex>
-													))}
-												</Flex>
-											)}
-                                    </Flex>
-                                ))}
-                            </Flex>
+																minWidth={image.width} height={image.height}>
+																<SmartImage
+																	enlarge
+																	radius="m"
+																	sizes={image.width.toString()}
+																	alt={image.alt}
+																	isLoading = {false}
+																	src={image.src}/>
+																</Flex>
+														))}
+													</Flex>
+												)}
+										</Flex>
+									))}
+								</Flex>
+							</RevealFx>
                         </>
                     )}
 		</Flex>
