@@ -135,6 +135,7 @@ export default function Home() {
 													onBackground="neutral-weak">
 													{skill.description}
 												</Text>
+												
 												{skill.images.length > 0 && (
 													<Flex
 														fillWidth paddingTop="m" gap="12"
