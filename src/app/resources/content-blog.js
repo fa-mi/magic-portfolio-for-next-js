@@ -81,7 +81,7 @@ const about = {
         experiences: [
             {
                 company: 'PT. Bank Rakyat Indonesia Tbk',
-                timeframe: '2022 - Present',
+                timeframe: '2023 - Present',
                 role: 'Junior Manager',
                 achievements: [
                     <>NFC Payment using Tokenize Card Technology</>,
