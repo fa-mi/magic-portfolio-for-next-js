@@ -104,12 +104,6 @@ const about = {
                         height: 9
                     },
                     {
-                        src: '/images/projects/work/bri/umi1.png',
-                        alt: 'Inventory Third Party',
-                        width: 16,
-                        height: 9
-                    },
-                    {
                         src: '/images/projects/work/bri/umi2.png',
                         alt: 'Inventory Third Party',
                         width: 16,
