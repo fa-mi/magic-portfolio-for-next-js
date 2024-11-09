@@ -110,6 +110,12 @@ const about = {
                         width: 16,
                         height: 9
                     },
+                    {
+                        src: '/images/projects/work/bri/dcm.png',
+                        alt: 'Dynamic Currency Matching',
+                        width: 16,
+                        height: 9
+                    },
                     
                 ]
             },
