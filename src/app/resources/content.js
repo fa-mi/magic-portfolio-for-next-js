@@ -6,7 +6,7 @@ const person = {
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Software Developer',
+    role:      '',
     avatar:    '/images/avatar.jpg',
     location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
@@ -175,12 +175,54 @@ const about = {
         title: 'Technical skills',
         skills: [
             {
+                title: 'Problem Solving',
+                description: <>Skilled in identifying challenges and implementing effective solutions, I bring a structured approach to problem-solving, analyzing complex issues to uncover root causes and developing creative, data-driven strategies to address them. My solutions are both efficient and scalable, ensuring they meet immediate needs while preparing for future growth. Whether working independently or collaborating within a team, I prioritize clarity and adaptability, consistently delivering results that align with business goals.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/certificates/problem-solving-basic.jpg',
+                        alt: 'Problem Solving Basic',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/certificates/problem-solving-intermediate.jpg',
+                        alt: 'Problem Solving Intermediate',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
+            {
                 title: 'SQL',
                 description: <>Proficient in designing and optimizing databases to transform business requirements into efficient, scalable data structures. Experienced in writing complex queries, managing relational databases, and ensuring data integrity to support business operations.</>,
                 images: [
                     {
-                        src: '/images/projects/skill/schema_db.png',
-                        alt: 'schema_db',
+                        src: '/images/projects/skill/certificates/sql-basic.jpg',
+                        alt: 'SQL Basic',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/certificates/sql-intermediate.jpg',
+                        alt: 'SQL Intermediate',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/certificates/sql-advanced.jpg',
+                        alt: 'SQL Advanced',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
+            {
+                title: 'Rest API',
+                description: <>Experienced in designing and implementing RESTful APIs, I focus on creating scalable, secure, and intuitive interfaces that streamline data exchange between client and server. I follow best practices to ensure consistency, versioning, and optimized performance, making it easy for frontend and backend systems to communicate seamlessly. My APIs are designed with both usability and future extensibility in mind, providing a robust foundation for diverse applications and integrations.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/certificates/rest-api-intermediate.jpg',
+                        alt: 'Problem Solving Intermediate',
                         width: 16,
                         height: 9
                     },
@@ -222,42 +264,42 @@ const about = {
                 while maintaining a high level of customer needs. </>,
                 images: []
             },
-            {
-                title: 'Figma',
-                description: <>Skilled in designing and prototyping with Figma, creating user-centered designs that align with business goals. Experienced in transforming complex processes into visually appealing and functional interfaces to enhance user engagement and drive customer acquisition.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/figma1.png',
-                        alt: 'barbershop',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/figma2.png',
-                        alt: 'iCinema',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/figma3.png',
-                        alt: 'iCinema',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/figma4.png',
-                        alt: 'iCinema',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/figma5.png',
-                        alt: 'rent bike',
-                        width: 16,
-                        height: 9
-                    },
-                 ]
-            },
+            // {
+            //     title: 'Figma',
+            //     description: <>Skilled in designing and prototyping with Figma, creating user-centered designs that align with business goals. Experienced in transforming complex processes into visually appealing and functional interfaces to enhance user engagement and drive customer acquisition.</>,
+            //     images: [
+            //         {
+            //             src: '/images/projects/skill/figma1.png',
+            //             alt: 'barbershop',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //         {
+            //             src: '/images/projects/skill/figma2.png',
+            //             alt: 'iCinema',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //         {
+            //             src: '/images/projects/skill/figma3.png',
+            //             alt: 'iCinema',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //         {
+            //             src: '/images/projects/skill/figma4.png',
+            //             alt: 'iCinema',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //         {
+            //             src: '/images/projects/skill/figma5.png',
+            //             alt: 'rent bike',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //      ]
+            // },
             {
                 title: 'Flutter',
                 description: <>Proficient in Flutter development, skilled in building responsive and intuitive mobile applications. Experienced in transforming business needs into seamless user experiences, leveraging Flutter’s rich UI capabilities to deliver high-performance, cross-platform apps.</>,
@@ -282,24 +324,24 @@ const about = {
                     },
                  ]
             },
-            {
-                title: 'Full Stack',
-                description: <>Versatile Full Stack developer with expertise in both front-end and back-end technologies. Skilled in building dynamic, scalable web applications, with a strong focus on delivering seamless user experiences and robust server-side functionality. Proficient in modern frameworks, databases, and cloud services to create end-to-end solutions that drive business growth.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/front-end.jpg',
-                        alt: 'ayocpns website',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/back-end.png',
-                        alt: 'lodz api',
-                        width: 16,
-                        height: 9
-                    },
-                 ]
-            },
+            // {
+            //     title: 'Full Stack',
+            //     description: <>Versatile Full Stack developer with expertise in both front-end and back-end technologies. Skilled in building dynamic, scalable web applications, with a strong focus on delivering seamless user experiences and robust server-side functionality. Proficient in modern frameworks, databases, and cloud services to create end-to-end solutions that drive business growth.</>,
+            //     images: [
+            //         {
+            //             src: '/images/projects/skill/front-end.jpg',
+            //             alt: 'ayocpns website',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //         {
+            //             src: '/images/projects/skill/back-end.png',
+            //             alt: 'lodz api',
+            //             width: 16,
+            //             height: 9
+            //         },
+            //      ]
+            // },
         ]
     }
 }
