@@ -85,7 +85,7 @@ const about = {
                 role: 'Junior Manager',
                 achievements: [
                     <>Debit Card Request on BRIMO</>,
-                    <>NFC Payment using Tokenize Card Technology</>,
+                    <>NFC Payment using Tokenize Technology</>,
                     <>Channel Card Activation</>,
                     <>Third Party Card Inventory</>,
                     <>Dynamic Currency Matching</>,
