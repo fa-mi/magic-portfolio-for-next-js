@@ -84,6 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'Junior Manager',
                 achievements: [
+                    <>Debit Card Request on BRIMO</>,
                     <>NFC Payment using Tokenize Card Technology</>,
                     <>Channel Card Activation</>,
                     <>Third Party Card Inventory</>,
@@ -112,6 +113,12 @@ const about = {
                     {
                         src: '/images/projects/work/bri/dcm.png',
                         alt: 'Dynamic Currency Matching',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/request-card.png',
+                        alt: 'Debit Card Request',
                         width: 16,
                         height: 9
                     },
