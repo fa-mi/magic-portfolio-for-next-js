@@ -86,10 +86,9 @@ const about = {
                 achievements: [
                     <>Debit Card Request on BRIMO</>,
                     <>NFC Payment using Tokenize Technology</>,
-                    <>Channel Card Activation</>,
-                    <>Third Party Card Inventory</>,
-                    <>Dynamic Currency Matching</>,
-                    <>Card Management System</>,
+                    <>Channel Debit Card Activation</>,
+                    <>Third Party Debit Card Inventory</>,
+                    <>Debit Card Dynamic Currency Matching</>,
                     <>Reengineering Business Process Card Production</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
