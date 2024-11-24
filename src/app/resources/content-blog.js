@@ -177,7 +177,8 @@ const about = {
         institutions: [
             {
                 name: 'University of Brawijaya',
-                description: <>Studied computer science.</>,
+                timeframe: '2015 - 2019',
+                description: <>Pursued a Bachelor’s degree in Computer Science, achieving a GPA of 3.41/4.00. Developed a strong foundation in programming, software development, and problem-solving skills.</>,
             },
         ]
     },
