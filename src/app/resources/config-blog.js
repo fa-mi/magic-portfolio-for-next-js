@@ -17,7 +17,7 @@ const protectedRoutes = {
 const effects = {
     gradient: true,
     dots:     false,
-    lines:    true,
+    lines:    false,
 }
 
 const style = {
@@ -27,8 +27,8 @@ const style = {
     accent:      'cyan',         // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     solid:       'color',        // color | contrast
     solidStyle:  'flat',         // flat | plastic
-    border:      'rounded',      // rounded | playful | conservative
-    surface:     'filled',       // filled | translucent
+    border:      'playful',      // rounded | playful | conservative
+    surface:     'translucent',       // filled | translucent
     transition:  'all'           // all | micro | macro
 }
 
