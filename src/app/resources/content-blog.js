@@ -336,6 +336,18 @@ const about = {
                     },
                  ]
             },
+            {
+                title: 'React Native + Supabase',
+                description: <>Experienced in building dynamic and scalable mobile applications using React Native and Supabase. Skilled in creating responsive user interfaces, managing real-time data, and implementing efficient backend integrations. Adept at delivering seamless cross-platform experiences tailored to user needs.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/supa1.png',
+                        alt: 'supa-social-app',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
             // {
             //     title: 'Full Stack',
             //     description: <>Versatile Full Stack developer with expertise in both front-end and back-end technologies. Skilled in building dynamic, scalable web applications, with a strong focus on delivering seamless user experiences and robust server-side functionality. Proficient in modern frameworks, databases, and cloud services to create end-to-end solutions that drive business growth.</>,
