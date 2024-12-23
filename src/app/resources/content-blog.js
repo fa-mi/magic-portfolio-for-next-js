@@ -84,6 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'Junior Manager',
                 achievements: [
+                    <>Data Stream Kafka</>,
                     <>Debit Card Request on BRIMO</>,
                     <>NFC Payment using Tokenize Technology</>,
                     <>Channel Debit Card Activation</>,
@@ -125,6 +126,12 @@ const about = {
                     {
                         src: '/images/projects/work/bri/request-card.png',
                         alt: 'Debit Card Request',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/kafka.png',
+                        alt: 'Kafka',
                         width: 16,
                         height: 9
                     },
