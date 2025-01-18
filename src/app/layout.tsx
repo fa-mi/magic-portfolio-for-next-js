@@ -16,6 +16,19 @@ export const metadata: Metadata = {
 	metadataBase: new URL('https://' + baseURL),
 	title: home.title,
 	description: home.description,
+	keywords: [
+		'portfolio', 
+		`${person.firstName} ${person.lastName}`, 
+		'web developer', 
+		'software engineer', 
+		'personal website'
+	],
+	authors: [{ name: `${person.firstName} ${person.lastName}`, url: `https://${baseURL}` }],
+	creator: `${person.firstName} ${person.lastName}`,
+	publisher: `${person.firstName} ${person.lastName}`,
+	alternates: {
+		canonical: `https://${baseURL}`,
+	},
 	openGraph: {
 		title: `${person.firstName}'s Portfolio`,
 		description: 'Portfolio website showcasing my work.',
@@ -23,6 +36,20 @@ export const metadata: Metadata = {
 		siteName: `${person.firstName}'s Portfolio`,
 		locale: 'en_US',
 		type: 'website',
+		images: [
+			{
+				url: '/og-image.png', 
+				width: 1200,
+				height: 630,
+				alt: `${person.firstName} ${person.lastName} Portfolio`,
+			},
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: `${person.firstName}'s Portfolio`,
+		description: 'Portfolio website showcasing my work.',
+		images: ['/twitter-image.png'], 
 	},
 	robots: {
 		index: true,
@@ -35,6 +62,24 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
+	icons: [
+		{
+			url: '/icon.png',
+			rel: 'icon',
+		},
+		{
+			url: '/icon.png',
+			rel: 'apple-touch-icon',
+		},
+	],
+	manifest: '/manifest.json',
+}
+
+export const viewport = {
+	themeColor: style.brand,
+	colorScheme: style.theme as 'light',
+	width: 'device-width',
+	initialScale: 1,
 }
 
 const primary = Inter({

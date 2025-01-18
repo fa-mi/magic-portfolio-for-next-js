@@ -16,7 +16,7 @@ type TableProps = {
 
 function Table({ data }: TableProps) {
     const headers = data.headers.map((header, index) => (
-        <th key={index}>{header}</th>
+        <th key={index} scope="col">{header}</th>
     ));
     const rows = data.rows.map((row, index) => (
         <tr key={index}>
@@ -27,12 +27,17 @@ function Table({ data }: TableProps) {
     ));
 
     return (
-        <table>
-            <thead>
-                <tr>{headers}</tr>
-            </thead>
-            <tbody>{rows}</tbody>
-        </table>
+        <div role="region" aria-labelledby="table-caption">
+            <table>
+                <caption id="table-caption" className="sr-only">
+                    Detailed information table
+                </caption>
+                <thead>
+                    <tr>{headers}</tr>
+                </thead>
+                <tbody>{rows}</tbody>
+            </table>
+        </div>
     );
 }
 
@@ -42,20 +47,40 @@ type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 function CustomLink({ href, children, ...props }: CustomLinkProps) {
+    const isExternal = !href.startsWith('/') && !href.startsWith('#');
+    
     if (href.startsWith('/')) {
         return (
-            <SmartLink href={href} {...props}>
+            <SmartLink 
+                href={href} 
+                {...props}
+                aria-label={`Navigate to ${href}`}
+            >
                 {children}
             </SmartLink>
         );
     }
 
     if (href.startsWith('#')) {
-        return <a href={href} {...props}>{children}</a>;
+        return (
+            <a 
+                href={href} 
+                {...props}
+                aria-label="Jump to section"
+            >
+                {children}
+            </a>
+        );
     }
 
     return (
-        <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
+        <a 
+            href={href} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label={`External link to ${href}`}
+            {...props}
+        >
             {children}
         </a>
     );
@@ -68,15 +93,27 @@ function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) 
     }
 
     return (
-        <SmartImage
-            className="my-20"
-            enlarge
-            radius="m"
-            aspectRatio="16 / 9"
-            alt={alt}
-            src={src}
-            {...props}/>
-        )
+        <figure>
+            <SmartImage
+                className="my-20"
+                enlarge
+                radius="m"
+                aspectRatio="16 / 9"
+                alt={alt || "Descriptive image"}
+                src={src}
+                aria-describedby={`image-description-${src.split('/').pop()}`}
+                {...props}
+            />
+            {alt && (
+                <figcaption 
+                    id={`image-description-${src.split('/').pop()}`}
+                    className="sr-only"
+                >
+                    {alt}
+                </figcaption>
+            )}
+        </figure>
+    );
 }
 
 function slugify(str: string): string {
