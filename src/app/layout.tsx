@@ -156,4 +156,4 @@ export default function RootLayout({ children } : RootLayoutProps) {
 			</Flex>
 		</Flex>
 	);
-}
+} 
