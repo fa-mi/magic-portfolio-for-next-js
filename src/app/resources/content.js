@@ -185,7 +185,7 @@ const about = {
             {
                 name: 'University of Brawijaya',
                 timeframe: '2015 - 2019',
-                description: <>Pursued a Bachelor’s degree in Computer Science, with achieving a GPA of <b>3.41</b>/4.00.</>,
+                description: <>Pursued a Bachelor’s degree in Computer Science.</>,
             },            
         ]
     },
