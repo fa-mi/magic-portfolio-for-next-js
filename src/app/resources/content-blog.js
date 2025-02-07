@@ -82,7 +82,7 @@ const about = {
             {
                 company: 'PT. Bank Rakyat Indonesia Tbk',
                 timeframe: '2023 - Present',
-                role: 'Junior Manager',
+                role: 'Junior Manager', 
                 achievements: [
                     <>Debit Card Contactless on BRIMO</>,
                     <>Data Stream Kafka</>,
