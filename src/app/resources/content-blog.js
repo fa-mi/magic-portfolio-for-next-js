@@ -82,7 +82,7 @@ const about = {
             {
                 company: 'PT. Bank Rakyat Indonesia Tbk',
                 timeframe: '2023 - Present',
-                role: 'Junior Manager', 
+                role: 'BFLP - Junior Manager',
                 achievements: [
                     <>Debit Card Contactless on BRIMO</>,
                     <>Data Stream Kafka</>,
@@ -91,9 +91,23 @@ const about = {
                     <>Channel Debit Card Activation</>,
                     <>Third Party Debit Card Inventory</>,
                     <>Debit Card Dynamic Currency Matching</>,
-                    <>Reengineering Business Process Card Production</>
+                    <>Reengineering Business Process Card Production</>,
+                    <>1st Rank at BFLP IT 13th Class</>,
+                    <>1st Champion at Bootcamp IT BFLP Season 2 by ASK</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
+                    {
+                        src: '/images/projects/work/bri/one-tap.png',
+                        alt: 'One Tap',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/bflp.png',
+                        alt: 'BFLP',
+                        width: 16,
+                        height: 9
+                    },
                     {
                         src: '/images/projects/work/bri/cardpro.png',
                         alt: 'Cardpro',
@@ -133,6 +147,12 @@ const about = {
                     {
                         src: '/images/projects/work/bri/kafka.png',
                         alt: 'Kafka',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/contactless.jpeg',
+                        alt: 'Contactless',
                         width: 16,
                         height: 9
                     },
