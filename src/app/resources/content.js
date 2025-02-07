@@ -77,7 +77,7 @@ const about = {
     },
     work: {
         display: true, // set to false to hide this section
-        title: 'Work Experience',
+        title: 'Achievements & Work Experience',
         experiences: [
             {
                 company: 'PT. Bank Rakyat Indonesia Tbk',
