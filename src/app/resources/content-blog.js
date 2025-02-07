@@ -84,6 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'Junior Manager',
                 achievements: [
+                    <>Debit Card Contactless on BRIMO</>,
                     <>Data Stream Kafka</>,
                     <>Debit Card Request on BRIMO</>,
                     <>NFC Payment using Tokenize Technology</>,
