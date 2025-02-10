@@ -376,10 +376,10 @@ const about = {
         skills: [
             {
                 title: 'Brilian Future Leadership Program',
-                description: <>
-                   🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.
-                   🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization. 
-                </>,          
+                description: [
+                    <>🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.</>,
+                    <>🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization.</>, 
+                ],        
                 images: [
                     {
                         src: '/images/achievements/bflp/one-tap.png',
