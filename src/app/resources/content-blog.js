@@ -166,7 +166,7 @@ const about = {
                 timeframe: '2020 - 2021',
                 role: 'IT Developer',
                 achievements: [
-                    <>Developed a applications based on business requirements using SAP framework.</>
+                    <>Developed some applications based on business requirements using SAP framework.</>
                 ],
                 images: [ 
                     {
@@ -178,6 +178,12 @@ const about = {
                     {
                         src: '/images/projects/work/trias/hr-home.png',
                         alt: 'SAP HR application',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/trias/gp-sales.jpeg',
+                        alt: 'GP Sales',
                         width: 16,
                         height: 9
                     },
