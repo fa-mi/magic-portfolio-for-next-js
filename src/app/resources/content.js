@@ -155,28 +155,6 @@ const about = {
                 images: [
                     {
                         src: '/images/projects/work/ayocpns/users-panel.jpg',
-                        alt: 'User Panel',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/work/ayocpns/admin-panel.jpg',
-                        alt: 'Admin Panel',
-                        width: 16,
-                        height: 9
-                    },
-                 ]
-            },
-            {
-                company: 'PT. Ayo Kreasi Bersama',
-                timeframe: '2024',
-                role: 'Freelance Fullstack Developer',
-                achievements: [
-                    <>Developed some features like user able to register tax affiliate, admin able to edit users request, and admin can upload proof tax invoices.</>
-                ],
-                images: [
-                    {
-                        src: '/images/projects/work/ayocpns/users-panel.jpg',
                         alt: 'Users Panel',
                         width: 16,
                         height: 9
@@ -242,7 +220,21 @@ const about = {
             {
                 name: 'University of Brawijaya',
                 timeframe: '2015 - 2019',
-                description: <>Pursued a Bachelor’s degree in Computer Science.</>,
+                description: <>Pursued a Bachelor’s degree in Computer Science and gained experience as a lab assistant for Basic Database and Database Administration.</>,
+                images: [
+                    {
+                        src: '/images/achievements/college/asprak-dbd.png',
+                        alt: 'Asisten Praktikum Dasar Basis Data',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/achievements/college/asprak-abd.png',
+                        alt: 'Asisten Praktikum Administrasi Basis Data',
+                        width: 16,
+                        height: 9
+                    },
+                ]
             },            
         ]
     },
