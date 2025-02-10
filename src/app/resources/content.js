@@ -146,6 +146,28 @@ const about = {
                 ]
             },
             {
+                company: 'PT. Ayo Kreasi Bersama',
+                timeframe: '2024',
+                role: 'Freelance Fullstack Developer',
+                achievements: [
+                    <>Developed some features like user able to register tax affiliate, admin able to edit users request, and admin can upload proof tax invoices.</>
+                ],
+                images: [
+                    {
+                        src: '/images/projects/work/ayocpns/users-panel.jpg',
+                        alt: 'User Panel',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/ayocpns/admin-panel.jpg',
+                        alt: 'Admin Panel',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
                 company: 'PT. Bank Mandiri Tbk',
                 timeframe: '2021 - 2022',
                 role: 'Backend Developer',
@@ -203,189 +225,36 @@ const about = {
         ]
     },
     technical: {
-        display: false, // set to false to hide this section
-        title: 'Technical skills',
+        display: true, // set to false to hide this section
+        title: 'Achievements',
         skills: [
             {
-                title: 'Problem Solving',
-                description: <>Skilled in identifying challenges and implementing effective solutions, I bring a structured approach to problem-solving, analyzing complex issues to uncover root causes and developing creative, data-driven strategies to address them. My solutions are both efficient and scalable, ensuring they meet immediate needs while preparing for future growth. Whether working independently or collaborating within a team, I prioritize clarity and adaptability, consistently delivering results that align with business goals.</>,
+                title: 'Brilian Future Leadership Program',
+                description: <>
+                   🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.
+                   🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization. 
+                </>,          
                 images: [
                     {
-                        src: '/images/projects/skill/certificates/problem-solving-basic.jpg',
-                        alt: 'Problem Solving Basic',
+                        src: '/images/projects/achievements/bflp/one-tap.png',
+                        alt: 'One Tap',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/skill/certificates/problem-solving-intermediate.jpg',
-                        alt: 'Problem Solving Intermediate',
+                        src: '/images/projects/achievements/bflp/baymax.jpg',
+                        alt: 'Baymax',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/achievements/bflp/final-result.png',
+                        alt: 'Final Result',
                         width: 16,
                         height: 9
                     },
                 ]
             },
-            {
-                title: 'SQL',
-                description: <>Proficient in designing and optimizing databases to transform business requirements into efficient, scalable data structures. Experienced in writing complex queries, managing relational databases, and ensuring data integrity to support business operations.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/certificates/sql-basic.jpg',
-                        alt: 'SQL Basic',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/certificates/sql-intermediate.jpg',
-                        alt: 'SQL Intermediate',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/certificates/sql-advanced.jpg',
-                        alt: 'SQL Advanced',
-                        width: 16,
-                        height: 9
-                    },
-                ]
-            },
-            {
-                title: 'Rest API',
-                description: <>Experienced in designing and implementing RESTful APIs, I focus on creating scalable, secure, and intuitive interfaces that streamline data exchange between client and server. I follow best practices to ensure consistency, versioning, and optimized performance, making it easy for frontend and backend systems to communicate seamlessly. My APIs are designed with both usability and future extensibility in mind, providing a robust foundation for diverse applications and integrations.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/certificates/rest-api-intermediate.jpg',
-                        alt: 'Problem Solving Intermediate',
-                        width: 16,
-                        height: 9
-                    },
-                ]
-            },
-            {
-                title: 'Business Intelligence',
-                description: <>Skilled in transforming raw data into actionable insights, leveraging advanced analytics and comprehensive data warehousing solutions. Experienced in identifying key trends and providing data-driven recommendations to support strategic decision-making and business growth.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/data-viz1.PNG',
-                        alt: 'data-visulization',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/data-viz2.PNG',
-                        alt: 'data-visulization',
-                        width: 16,
-                        height: 9
-                    },
-                ]
-            },
-            {
-                title: 'Machine Learning',
-                description: <>Proficient in building and deploying machine learning models to analyze complex datasets and uncover actionable insights. Experienced in applying advanced algorithms to identify patterns, predict trends, and support data-driven decision-making, helping businesses optimize operations and drive innovation.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/ml.png',
-                        alt: 'machine-learning',
-                        width: 16,
-                        height: 9
-                    }
-                ]
-            },
-            {
-                title: 'SAP',
-                description: <>Facilitating the implementation and support of SAP modules to enhance client business functionality and overall performance, 
-                while maintaining a high level of customer needs. </>,
-                images: []
-            },
-            // {
-            //     title: 'Figma',
-            //     description: <>Skilled in designing and prototyping with Figma, creating user-centered designs that align with business goals. Experienced in transforming complex processes into visually appealing and functional interfaces to enhance user engagement and drive customer acquisition.</>,
-            //     images: [
-            //         {
-            //             src: '/images/projects/skill/figma1.png',
-            //             alt: 'barbershop',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma2.png',
-            //             alt: 'iCinema',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma3.png',
-            //             alt: 'iCinema',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma4.png',
-            //             alt: 'iCinema',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma5.png',
-            //             alt: 'rent bike',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //      ]
-            // },
-            {
-                title: 'Flutter',
-                description: <>Proficient in Flutter development, skilled in building responsive and intuitive mobile applications. Experienced in transforming business needs into seamless user experiences, leveraging Flutter’s rich UI capabilities to deliver high-performance, cross-platform apps.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/flutter1.png',
-                        alt: 'flutix',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/flutter2.png',
-                        alt: 'flutix',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/skill/flutter3.png',
-                        alt: 'flutix',
-                        width: 16,
-                        height: 9
-                    },
-                 ]
-            },
-            {
-                title: 'React Native + Supabase',
-                description: <>Experienced in building dynamic and scalable mobile applications using React Native and Supabase. Skilled in creating responsive user interfaces, managing real-time data, and implementing efficient backend integrations. Adept at delivering seamless cross-platform experiences tailored to user needs.</>,
-                images: [
-                    {
-                        src: '/images/projects/skill/supa1.png',
-                        alt: 'supa-social-app',
-                        width: 16,
-                        height: 9
-                    },
-                ]
-            },            
-            // {
-            //     title: 'Full Stack',
-            //     description: <>Versatile Full Stack developer with expertise in both front-end and back-end technologies. Skilled in building dynamic, scalable web applications, with a strong focus on delivering seamless user experiences and robust server-side functionality. Proficient in modern frameworks, databases, and cloud services to create end-to-end solutions that drive business growth.</>,
-            //     images: [
-            //         {
-            //             src: '/images/projects/skill/front-end.jpg',
-            //             alt: 'ayocpns website',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/back-end.png',
-            //             alt: 'lodz api',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //      ]
-            // },
         ]
     }
 }
