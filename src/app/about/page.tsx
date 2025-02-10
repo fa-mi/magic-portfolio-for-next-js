@@ -49,9 +49,9 @@ const structure = [
         items: about.work.experiences.map(experience => experience.company)
     },
     { 
-        title: about.technical.title,
-        display: about.technical.display,
-        items: about.technical.skills.map(skill => skill.title)
+        title: about.achievements.title,
+        display: about.achievements.display,
+        items: about.achievements.skills.map(skill => skill.title)
     },
 ]
 
@@ -322,18 +322,18 @@ export default function About() {
                         </>
                     )}
 
-                    { about.technical.display && (
+                    { about.achievements.display && (
                         <>
                             <Heading
                                 as="h2"
-                                id={about.technical.title}
+                                id={about.achievements.title}
                                 variant="display-strong-s" marginBottom="40">
-                                {about.technical.title}
+                                {about.achievements.title}
                             </Heading>
                             <Flex
                                 direction="column"
                                 fillWidth gap="l">
-                                {about.technical.skills.map((skill, index) => (
+                                {about.achievements.skills.map((skill, index) => (
                                     <Flex
                                         key={`${skill}-${index}`}
                                         fillWidth gap="4"
