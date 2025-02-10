@@ -146,6 +146,28 @@ const about = {
                 ]
             },
             {
+                company: 'PT. Ayo Kreasi Bersama',
+                timeframe: '2024',
+                role: 'Freelance Fullstack Developer',
+                achievements: [
+                    <>Developed some features like user able to register tax affiliate, admin able to edit users request, and admin can upload proof tax invoices.</>
+                ],
+                images: [
+                    {
+                        src: '/images/projects/work/ayocpns/users-panel.jpg',
+                        alt: 'Users Panel',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/ayocpns/admin-panel.jpg',
+                        alt: 'Admin Panel',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
                 company: 'PT. Bank Mandiri Tbk',
                 timeframe: '2021 - 2022',
                 role: 'Backend Developer',
@@ -386,6 +408,39 @@ const about = {
             //         },
             //      ]
             // },
+        ]
+    },
+    achievements: {
+        display: true, // set to false to hide this section
+        title: 'Achievements',
+        skills: [
+            {
+                title: 'Brilian Future Leadership Program',
+                description: <>
+                   🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.
+                   🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization. 
+                </>,          
+                images: [
+                    {
+                        src: '/images/achievements/bflp/one-tap.png',
+                        alt: 'One Tap',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/achievements/bflp/baymax.jpg',
+                        alt: 'Baymax',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/achievements/bflp/final-result.png',
+                        alt: 'Final Result',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
         ]
     }
 }
