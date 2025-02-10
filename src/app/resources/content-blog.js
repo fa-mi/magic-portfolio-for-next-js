@@ -318,42 +318,6 @@ const about = {
                 while maintaining a high level of customer needs. </>,
                 images: []
             },
-            // {
-            //     title: 'Figma',
-            //     description: <>Skilled in designing and prototyping with Figma, creating user-centered designs that align with business goals. Experienced in transforming complex processes into visually appealing and functional interfaces to enhance user engagement and drive customer acquisition.</>,
-            //     images: [
-            //         {
-            //             src: '/images/projects/skill/figma1.png',
-            //             alt: 'barbershop',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma2.png',
-            //             alt: 'iCinema',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma3.png',
-            //             alt: 'iCinema',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma4.png',
-            //             alt: 'iCinema',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/figma5.png',
-            //             alt: 'rent bike',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //      ]
-            // },
             {
                 title: 'Flutter',
                 description: <>Proficient in Flutter development, skilled in building responsive and intuitive mobile applications. Experienced in transforming business needs into seamless user experiences, leveraging Flutter’s rich UI capabilities to deliver high-performance, cross-platform apps.</>,
@@ -390,24 +354,6 @@ const about = {
                     },
                 ]
             },
-            // {
-            //     title: 'Full Stack',
-            //     description: <>Versatile Full Stack developer with expertise in both front-end and back-end technologies. Skilled in building dynamic, scalable web applications, with a strong focus on delivering seamless user experiences and robust server-side functionality. Proficient in modern frameworks, databases, and cloud services to create end-to-end solutions that drive business growth.</>,
-            //     images: [
-            //         {
-            //             src: '/images/projects/skill/front-end.jpg',
-            //             alt: 'ayocpns website',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //         {
-            //             src: '/images/projects/skill/back-end.png',
-            //             alt: 'lodz api',
-            //             width: 16,
-            //             height: 9
-            //         },
-            //      ]
-            // },
         ]
     },
     achievements: {
@@ -435,39 +381,6 @@ const about = {
                     },
                     {
                         src: '/images/projects/achievements/bflp/final-result.png',
-                        alt: 'Final Result',
-                        width: 16,
-                        height: 9
-                    },
-                ]
-            },
-        ]
-    },
-    achievements: {
-        display: true, // set to false to hide this section
-        title: 'Achievements',
-        skills: [
-            {
-                title: 'Brilian Future Leadership Program',
-                description: <>
-                   🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.
-                   🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization. 
-                </>,          
-                images: [
-                    {
-                        src: '/images/achievements/bflp/one-tap.png',
-                        alt: 'One Tap',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/achievements/bflp/baymax.jpg',
-                        alt: 'Baymax',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/achievements/bflp/final-result.png',
                         alt: 'Final Result',
                         width: 16,
                         height: 9

@@ -247,64 +247,130 @@ const about = {
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Achievements',
+        display: false, // set to false to hide this section
+        title: 'Technical skills',
         skills: [
             {
-                title: 'Brilian Future Leadership Program',
-                description: <>
-                   🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.
-                   🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization. 
-                </>,          
+                title: 'Problem Solving',
+                description: <>Skilled in identifying challenges and implementing effective solutions, I bring a structured approach to problem-solving, analyzing complex issues to uncover root causes and developing creative, data-driven strategies to address them. My solutions are both efficient and scalable, ensuring they meet immediate needs while preparing for future growth. Whether working independently or collaborating within a team, I prioritize clarity and adaptability, consistently delivering results that align with business goals.</>,
                 images: [
                     {
-                        src: '/images/projects/achievements/bflp/one-tap.png',
-                        alt: 'One Tap',
+                        src: '/images/projects/skill/certificates/problem-solving-basic.jpg',
+                        alt: 'Problem Solving Basic',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/achievements/bflp/baymax.jpg',
-                        alt: 'Baymax',
-                        width: 16,
-                        height: 9
-                    },
-                    {
-                        src: '/images/projects/achievements/bflp/final-result.png',
-                        alt: 'Final Result',
+                        src: '/images/projects/skill/certificates/problem-solving-intermediate.jpg',
+                        alt: 'Problem Solving Intermediate',
                         width: 16,
                         height: 9
                     },
                 ]
             },
-        ]
-    },
-    achievements: {
-        display: true, // set to false to hide this section
-        title: 'Achievements',
-        skills: [
             {
-                title: 'Brilian Future Leadership Program',
-                description: <>
-                   🏅 My team emerged as the Champion of Season 2 in the IT Onboarding Bootcamp by ASK Learning, where we innovated and developed BRI One Tap, a payment and transfer solution integrated with BRIMO mobile banking apps using NFC technology.
-                   🥇 I secured the 1st rank in the prestigious BFLP program with business process reengineering project, CardPro—a cutting-edge system designed to streamline card production—demonstrating my expertise in financial technology and process optimization. 
-                </>,          
+                title: 'SQL',
+                description: <>Proficient in designing and optimizing databases to transform business requirements into efficient, scalable data structures. Experienced in writing complex queries, managing relational databases, and ensuring data integrity to support business operations.</>,
                 images: [
                     {
-                        src: '/images/achievements/bflp/one-tap.png',
-                        alt: 'One Tap',
+                        src: '/images/projects/skill/certificates/sql-basic.jpg',
+                        alt: 'SQL Basic',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/achievements/bflp/baymax.jpg',
-                        alt: 'Baymax',
+                        src: '/images/projects/skill/certificates/sql-intermediate.jpg',
+                        alt: 'SQL Intermediate',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/achievements/bflp/final-result.png',
-                        alt: 'Final Result',
+                        src: '/images/projects/skill/certificates/sql-advanced.jpg',
+                        alt: 'SQL Advanced',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
+            {
+                title: 'Rest API',
+                description: <>Experienced in designing and implementing RESTful APIs, I focus on creating scalable, secure, and intuitive interfaces that streamline data exchange between client and server. I follow best practices to ensure consistency, versioning, and optimized performance, making it easy for frontend and backend systems to communicate seamlessly. My APIs are designed with both usability and future extensibility in mind, providing a robust foundation for diverse applications and integrations.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/certificates/rest-api-intermediate.jpg',
+                        alt: 'Problem Solving Intermediate',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
+            {
+                title: 'Business Intelligence',
+                description: <>Skilled in transforming raw data into actionable insights, leveraging advanced analytics and comprehensive data warehousing solutions. Experienced in identifying key trends and providing data-driven recommendations to support strategic decision-making and business growth.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/data-viz1.PNG',
+                        alt: 'data-visulization',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/data-viz2.PNG',
+                        alt: 'data-visulization',
+                        width: 16,
+                        height: 9
+                    },
+                ]
+            },
+            {
+                title: 'Machine Learning',
+                description: <>Proficient in building and deploying machine learning models to analyze complex datasets and uncover actionable insights. Experienced in applying advanced algorithms to identify patterns, predict trends, and support data-driven decision-making, helping businesses optimize operations and drive innovation.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/ml.png',
+                        alt: 'machine-learning',
+                        width: 16,
+                        height: 9
+                    }
+                ]
+            },
+            {
+                title: 'SAP',
+                description: <>Facilitating the implementation and support of SAP modules to enhance client business functionality and overall performance, 
+                while maintaining a high level of customer needs. </>,
+                images: []
+            },
+            {
+                title: 'Flutter',
+                description: <>Proficient in Flutter development, skilled in building responsive and intuitive mobile applications. Experienced in transforming business needs into seamless user experiences, leveraging Flutter’s rich UI capabilities to deliver high-performance, cross-platform apps.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/flutter1.png',
+                        alt: 'flutix',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/flutter2.png',
+                        alt: 'flutix',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/skill/flutter3.png',
+                        alt: 'flutix',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
+                title: 'React Native + Supabase',
+                description: <>Experienced in building dynamic and scalable mobile applications using React Native and Supabase. Skilled in creating responsive user interfaces, managing real-time data, and implementing efficient backend integrations. Adept at delivering seamless cross-platform experiences tailored to user needs.</>,
+                images: [
+                    {
+                        src: '/images/projects/skill/supa1.png',
+                        alt: 'supa-social-app',
                         width: 16,
                         height: 9
                     },
