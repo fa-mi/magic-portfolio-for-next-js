@@ -84,6 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'BFLP - Junior Manager',
                 achievements: [
+                    <>Inventory Transfer Branch Office</>,
                     <>Debit Card Contactless on BRIMO</>,
                     <>Data Stream Kafka</>,
                     <>Debit Card Request on BRIMO</>,
@@ -139,6 +140,12 @@ const about = {
                     {
                         src: '/images/projects/work/bri/contactless.jpeg',
                         alt: 'Contactless',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/nds-stock-transfer.png',
+                        alt: 'NDS Stock Transfer',
                         width: 16,
                         height: 9
                     },
