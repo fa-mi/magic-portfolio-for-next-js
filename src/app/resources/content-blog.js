@@ -89,7 +89,7 @@ const about = {
                     <>Data Stream Kafka</>,
                     <>Debit Card Request on BRIMO</>,
                     <>NFC Payment using Tokenize Technology</>,
-                    <>Channel Debit Card Activation</>,
+                    <>Debit Card Channel Activation</>,
                     <>Debit Card Inventory Third Party</>,
                     <>Debit Card Dynamic Currency Matching</>,
                     <>Card Management System</>,
