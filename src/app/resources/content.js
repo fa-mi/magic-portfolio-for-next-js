@@ -84,14 +84,15 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'BFLP - Junior Manager',
                 achievements: [
-                    <>Inventory Transfer Branch Office</>,
+                    <>Debit Card Inventory Transfer Branch Office</>,
                     <>Debit Card Contactless on BRIMO</>,
                     <>Data Stream Kafka</>,
                     <>Debit Card Request on BRIMO</>,
                     <>NFC Payment using Tokenize Technology</>,
                     <>Channel Debit Card Activation</>,
-                    <>Third Party Debit Card Inventory</>,
+                    <>Debit Card Inventory Third Party</>,
                     <>Debit Card Dynamic Currency Matching</>,
+                    <>Card Management System</>,
                     <>Reengineering Business Process Card Production</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
@@ -108,14 +109,20 @@ const about = {
                         height: 9
                     },
                     {
+                        src: '/images/projects/work/bri/dcm.png',
+                        alt: 'Dynamic Currency Matching',
+                        width: 16,
+                        height: 9
+                    },
+                    {
                         src: '/images/projects/work/bri/umi2.png',
                         alt: 'Inventory Third Party',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/work/bri/dcm.png',
-                        alt: 'Dynamic Currency Matching',
+                        src: '/images/projects/work/bri/channel-activation.JPG',
+                        alt: 'Channel Debit Card Activation',
                         width: 16,
                         height: 9
                     },
