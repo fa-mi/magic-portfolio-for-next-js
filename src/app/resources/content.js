@@ -202,7 +202,7 @@ const about = {
                 timeframe: '2020 - 2021',
                 role: 'IT Developer',
                 achievements: [
-                    <>Developed some applications based on business requirements using SAP framework.</>
+                    <>Engineered end-to-end SAP solutions to meet complex business requirements—developing custom ABAP applications—and seamlessly integrated transactional data into Power BI for real-time analytics.</>
                 ],
                 images: [ 
                     {
