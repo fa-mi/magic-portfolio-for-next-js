@@ -1,26 +1,9 @@
+# *
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
 
-Sitemap: https://fahmi-aquinas.vercell.app/sitemap.xml
+# Host
+Host: https://fahmi-aquinas.vercel.app
 
-# Crawl-delay parameter: 10 seconds between successive requests
-Crawl-delay: 10
-
-# Specific bot configurations
-User-agent: Googlebot
-Allow: /blog/
-Allow: /work/
-
-User-agent: Bingbot
-Allow: /blog/
-Allow: /work/
-
-User-agent: DuckDuckBot
-Allow: /
-
-# Block specific directories or file types if needed
-Disallow: /*.pdf$
-Disallow: /private/
-Disallow: /admin/
+# Sitemaps
+Sitemap: https://fahmi-aquinas.vercel.app/sitemap.xml
