@@ -84,6 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'BFLP - Junior Manager',
                 achievements: [
+                    <>Brizzi Card Sale Branch Office</>,
                     <>Debit Card Inventory Transfer Branch Office</>,
                     <>Debit Card Contactless on BRIMO</>,
                     <>Data Stream Kafka</>,
