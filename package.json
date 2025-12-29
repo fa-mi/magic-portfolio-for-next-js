@@ -16,6 +16,7 @@
 		"@once-ui-system/magic-portfolio": "file:",
 		"classnames": "^2.5.1",
 		"cookie": "^0.6.0",
+		"framer-motion": "^12.23.26",
 		"gray-matter": "^4.0.3",
 		"next": "^14.2.4",
 		"next-mdx-remote": "^5.0.0",
