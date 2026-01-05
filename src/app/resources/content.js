@@ -345,7 +345,14 @@ const about = {
                 title: 'SAP',
                 description: <>Facilitating the implementation and support of SAP modules to enhance client business functionality and overall performance, 
                 while maintaining a high level of customer needs. </>,
-                images: []
+                images: [
+                    {
+                        src: '/images/projects/skill/sap-logo.png',
+                        alt: 'sap',
+                        width: 16,
+                        height: 9
+                    }
+                ]
             },
             {
                 title: 'Flutter',
