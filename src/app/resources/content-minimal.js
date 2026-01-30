@@ -84,7 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'BFLP - Junior Manager',
                 achievements: [
-                    <>Card Activation on Project Government Social Aid</>,
+                    <>Debit Debit Card Activation on Project Government Social Aid</>,
                     <>Brizzi Card Sale Branch Office</>,
                     <>Debit Card Inventory Transfer Branch Office</>,
                     <>Debit Card Contactless on BRIMO</>,
