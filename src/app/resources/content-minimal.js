@@ -84,7 +84,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'Junior Manager',
                 achievements: [
-                    <>Data Pipeline of One Single Truth Data Platform</>,
+                    <>Stream Data Pipeline of One Single Truth Data Platform</>,
                     <>Debit Card Activation on Project Government Social Aid</>,
                     <>Brizzi Card Sale Branch Office</>,
                     <>Debit Card Inventory Transfer Branch Office</>,
