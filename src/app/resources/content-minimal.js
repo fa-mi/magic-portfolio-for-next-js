@@ -82,9 +82,10 @@ const about = {
             {
                 company: 'PT. Bank Rakyat Indonesia Tbk',
                 timeframe: '2023 - Present',
-                role: 'BFLP - Junior Manager',
+                role: 'Junior Manager',
                 achievements: [
-                    <>Debit Debit Card Activation on Project Government Social Aid</>,
+                    <>Data Pipeline of One Single Truth Data Platform</>,
+                    <>Debit Card Activation on Project Government Social Aid</>,
                     <>Brizzi Card Sale Branch Office</>,
                     <>Debit Card Inventory Transfer Branch Office</>,
                     <>Debit Card Contactless on BRIMO</>,
