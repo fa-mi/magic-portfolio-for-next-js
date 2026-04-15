@@ -3,6 +3,7 @@ import { CustomMDX } from '@/app/components/mdx'
 import { formatDate, getPosts } from '@/app/utils'
 import { AvatarGroup, Button, Flex, Heading, SmartImage, Text } from '@/once-ui/components'
 import { baseURL, person } from '@/app/resources';
+import ScrollReveal from '../components/ScrollReveal';
 
 interface WorkParams {
     params: {
@@ -74,6 +75,11 @@ export default function Project({ params }: WorkParams) {
         src: person.avatar,
     })) || [];
 
+	const isComingSoon = (date?: string) => {
+  if (!date) return true;
+  return date.toLowerCase().includes("coming");
+};
+
 	return (
 		<Flex as="section"
 			fillWidth maxWidth="m"
@@ -87,8 +93,14 @@ export default function Project({ params }: WorkParams) {
 						'@context': 'https://schema.org',
 						'@type': 'BlogPosting',
 						headline: post.metadata.title,
-						datePublished: post.metadata.publishedAt,
-						dateModified: post.metadata.publishedAt,
+						datePublished:
+						isComingSoon(post.metadata.publishedAt)
+							? undefined
+							: post.metadata.publishedAt,
+						dateModified:
+						isComingSoon(post.metadata.publishedAt)
+							? undefined
+							: post.metadata.publishedAt,
 						description: post.metadata.summary,
 						image: post.metadata.image
 							? `https://${baseURL}${post.metadata.image}`
@@ -136,13 +148,15 @@ export default function Project({ params }: WorkParams) {
 							avatars={avatars}
 							size="m"/>
 					)}
-					<Text
-						variant="body-default-s"
-						onBackground="neutral-weak">
-						{formatDate(post.metadata.publishedAt)}
+					<Text variant="body-default-s" onBackground="neutral-weak">
+						{isComingSoon(post.metadata.publishedAt)
+							? "🚀 Coming Soon"
+							: post.metadata.publishedAt}
 					</Text>
 				</Flex>
-				<CustomMDX source={post.content} />
+				<ScrollReveal>
+					<CustomMDX source={post.content} />
+				</ScrollReveal>
 			</Flex>
 		</Flex>
 	)

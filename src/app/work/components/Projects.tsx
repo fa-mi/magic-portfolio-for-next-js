@@ -10,8 +10,19 @@ interface ProjectsProps {
 export function Projects({ range }: ProjectsProps) {
     let allProjects = getPosts(['src', 'app', 'work', 'projects']);
 
+    const parseDate = (date?: string) => {
+    if (!date) return 0; // 🛡️ guard
+
+    if (date.toLowerCase().includes("coming")) {
+        return Infinity;
+    }
+
+    const parsed = new Date(date).getTime();
+    return isNaN(parsed) ? 0 : parsed;
+};
+
     const sortedProjects = allProjects.sort((a, b) => {
-        return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
+        return parseDate(b.metadata.publishedAt) - parseDate(a.metadata.publishedAt);
     });
 
     const displayedProjects = range
