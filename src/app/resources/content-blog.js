@@ -80,6 +80,23 @@ const about = {
         title: 'Experience',
         experiences: [
             {
+                company: 'Digital Pocket ID',
+                timeframe: '2026',
+                role: 'Co-Founder',
+                achievements: [
+                    <>A smart personal finance app that helps users manage money, optimize spending, and make smarter financial decisions effortlessly.</>,
+                    <>Check this out: <a href="https://dipo.info" target="_blank" rel="noopener noreferrer">https://dipo.info</a></>
+                ],
+                images: [
+                    {
+                        src: '/images/projects/dipo/PortofolioMeetDiPo.png',
+                        alt: 'DiPo App',
+                        width: 16,
+                        height: 9
+                    },
+                 ]
+            },
+            {
                 company: 'PT. Bank Rakyat Indonesia Tbk',
                 timeframe: '2023 - Present',
                 role: 'Junior Manager',
