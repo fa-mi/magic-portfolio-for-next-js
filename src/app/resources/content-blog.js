@@ -85,7 +85,7 @@ const about = {
                 role: 'Co-Founder',
                 achievements: [
                     <>A smart personal finance app that helps users manage money, optimize spending, and make smarter financial decisions effortlessly.</>,
-                    <>Check this out: <a href="http://home.dipo.info" target="_blank" rel="noopener noreferrer">Click here</a></>
+                    <>Check this out: <a href="http://dipo.info" target="_blank" rel="noopener noreferrer">Click here</a></>
                 ],
                 images: [
                     {
