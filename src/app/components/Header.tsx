@@ -1,128 +1,126 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 
-import { Flex, ToggleButton } from "@/once-ui/components"
-import styles from '@/app/components/Header.module.scss'
+import { Flex, Button } from "@/once-ui/components";
+import styles from "@/app/components/Header.module.scss";
 
-import { routes, display } from '@/app/resources'
-import { person, home, about, blog, work, gallery } from '@/app/resources'
+const violet = "#8b5cf6";
+const violetLight = "#a78bfa";
+const indigo = "#6366f1";
 
-type TimeDisplayProps = {
-    timeZone: string;
-    locale?: string;  // Optionally allow locale, defaulting to 'en-GB'
-};
-
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = 'en-GB' }) => {
-    const [currentTime, setCurrentTime] = useState('');
-
-    useEffect(() => {
-        const updateTime = () => {
-            const now = new Date();
-            const options: Intl.DateTimeFormatOptions = {
-                timeZone,
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false,
-            };
-            const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-            setCurrentTime(timeString);
-        };
-
-        updateTime();
-        const intervalId = setInterval(updateTime, 1000);
-
-        return () => clearInterval(intervalId);
-    }, [timeZone, locale]);
-
-    return (
-        <>
-            {currentTime}
-        </>
-    );
-};
-
-export default TimeDisplay;
+const navItems: { label: string; href: string }[] = [
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
+];
 
 export const Header = () => {
-    const pathname = usePathname() ?? '';
+  const pathname = usePathname() ?? "";
 
-    return (
-        <Flex style={{height: 'fit-content'}}
-            className={styles.position}
-            as="header"
-            zIndex={9}
-            fillWidth padding="8"
-            justifyContent="center">
-            <Flex
-                hide="s"
-                paddingLeft="12" fillWidth
-                alignItems="center"
-                textVariant="body-default-s">
-                { display.location && (
-                    <>{person.location}</>
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href.startsWith("/#")) return false;
+    return pathname.startsWith(href);
+  };
+
+  return (
+    <Flex
+      as="header"
+      className={styles.position}
+      zIndex={9}
+      fillWidth
+      paddingY="16"
+      paddingX="l"
+      justifyContent="center"
+      style={{
+        position: "sticky",
+        top: 0,
+        background: "rgba(8, 8, 14, 0.6)",
+        backdropFilter: "blur(14px)",
+        WebkitBackdropFilter: "blur(14px)",
+        borderBottom: "1px solid var(--neutral-alpha-weak)",
+      }}
+    >
+      <Flex
+        fillWidth
+        maxWidth="l"
+        alignItems="center"
+        justifyContent="space-between"
+        gap="m"
+      >
+        {/* Logo */}
+        <Link href="/" style={{ textDecoration: "none" }}>
+          <span
+            style={{
+              fontFamily: "var(--font-family-heading)",
+              fontWeight: 700,
+              fontSize: "1.5rem",
+              letterSpacing: "-0.02em",
+              color: "var(--neutral-on-background-strong)",
+            }}
+          >
+            FA
+            <span style={{ color: violetLight }}>.</span>
+          </span>
+        </Link>
+
+        {/* Nav */}
+        <Flex hide="s" gap="4" alignItems="center">
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={styles.navLink}
+                style={{
+                  position: "relative",
+                  padding: "8px 12px",
+                  fontSize: "0.9rem",
+                  color: active
+                    ? "var(--neutral-on-background-strong)"
+                    : "var(--neutral-on-background-weak)",
+                  textDecoration: "none",
+                  transition: "color 0.2s ease",
+                }}
+              >
+                {item.label}
+                {active && (
+                  <span
+                    style={{
+                      position: "absolute",
+                      left: "12px",
+                      right: "12px",
+                      bottom: "2px",
+                      height: "2px",
+                      borderRadius: "2px",
+                      background: violetLight,
+                    }}
+                  />
                 )}
-            </Flex>
-            <Flex
-                background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
-                padding="4"
-                justifyContent="center">
-                <Flex
-                    gap="4"
-                    textVariant="body-default-s">
-                    { routes['/'] && (
-                        <ToggleButton
-                            prefixIcon="home"
-                            href="/"
-                            selected={pathname === "/"}>
-                            <Flex paddingX="2" hide="s">{home.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/about'] && (
-                        <ToggleButton
-                            prefixIcon="person"
-                            href="/about"
-                            selected={pathname === "/about"}>
-                            <Flex paddingX="2" hide="s">{about.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/work'] && (
-                        <ToggleButton
-                            prefixIcon="grid"
-                            href="/work"
-                            selected={pathname.startsWith('/work')}>
-                            <Flex paddingX="2" hide="s">{work.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/blog'] && (
-                        <ToggleButton
-                            prefixIcon="book"
-                            href="/blog"
-                            selected={pathname.startsWith('/blog')}>
-                            <Flex paddingX="2" hide="s">{blog.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/gallery'] && (
-                        <ToggleButton
-                            prefixIcon="gallery"
-                            href="/gallery"
-                            selected={pathname.startsWith('/gallery')}>
-                            <Flex paddingX="2" hide="s">{gallery.label}</Flex>
-                        </ToggleButton>
-                    )}
-                </Flex>
-            </Flex>
-            <Flex
-                hide="s"
-                paddingRight="12" fillWidth
-                justifyContent="flex-end" alignItems="center"
-                textVariant="body-default-s">
-                { display.time && (
-                    <TimeDisplay timeZone={person.location}/>
-                )}
-            </Flex>
+              </Link>
+            );
+          })}
         </Flex>
-    )
-}
+
+        {/* CTA */}
+        <Button
+          href="/#contact"
+          variant="primary"
+          size="s"
+          suffixIcon="arrowUpRight"
+          data-border="rounded"
+          style={{
+            background: `linear-gradient(135deg, ${indigo} 0%, ${violet} 100%)`,
+            border: "none",
+            boxShadow: "0 10px 24px -10px rgba(139, 92, 246, 0.6)",
+          }}
+        >
+          Let&apos;s Talk
+        </Button>
+      </Flex>
+    </Flex>
+  );
+};

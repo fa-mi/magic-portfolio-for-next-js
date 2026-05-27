@@ -3,6 +3,7 @@
 import { AvatarGroup, Flex, Heading, SmartLink, Text } from "@/once-ui/components";
 import { useEffect, useState } from "react";
 import ParallaxImage from "./ParallaxImage";
+import { TiltCard } from "./TiltCard";
 
 interface ProjectCardProps {
     href: string;
@@ -43,15 +44,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     const descriptionItems = description?.split("\n") || [];
 
     return (
+        <TiltCard className="clay" intensity={5}>
         <Flex
             fillWidth
             direction="column"
             style={{
                 borderRadius: '24px',
                 overflow: 'hidden',
-                background: 'var(--surface-background)',
-                border: '1px solid var(--neutral-alpha-weak)',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
             }}
             className="project-card"
         >
@@ -63,7 +62,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                     position: 'relative',
                     cursor: images.length > 1 ? 'pointer' : 'default',
                     overflow: 'hidden',
-                    borderRadius: '24px'
+                    borderRadius: '24px',
+                    transform: 'translateZ(40px)',
                 }}
             >
                 <ParallaxImage src={images[activeIndex]} />
@@ -171,5 +171,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 </Flex>
             </Flex>
         </Flex>
+        </TiltCard>
     );
 };

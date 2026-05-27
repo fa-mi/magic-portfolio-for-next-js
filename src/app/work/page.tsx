@@ -1,5 +1,5 @@
 import { getPosts } from '@/app/utils';
-import { Flex } from '@/once-ui/components';
+import { Flex, Heading, Text, RevealFx } from '@/once-ui/components';
 import { Projects } from '@/app/work/components/Projects';
 import { baseURL, person, work } from '../resources';
 
@@ -64,6 +64,38 @@ export default function Work() {
                     }),
                 }}
             />
+            <Flex
+                fillWidth
+                direction="column"
+                gap="s"
+                paddingX="l"
+                paddingTop="l"
+                paddingBottom="xl"
+            >
+                <RevealFx translateY="2">
+                    <Text
+                        variant="label-default-s"
+                        onBackground="accent-weak"
+                        style={{ textTransform: "uppercase", letterSpacing: "0.14em" }}
+                    >
+                        Portfolio
+                    </Text>
+                </RevealFx>
+                <RevealFx translateY="4">
+                    <Heading variant="display-strong-l">
+                        {work.title}
+                    </Heading>
+                </RevealFx>
+                <RevealFx translateY="8" delay={0.1}>
+                    <Text
+                        variant="body-default-l"
+                        onBackground="neutral-weak"
+                        style={{ maxWidth: "52ch" }}
+                    >
+                        {work.description}
+                    </Text>
+                </RevealFx>
+            </Flex>
             <Projects/>
         </Flex>
     );

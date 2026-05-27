@@ -3,10 +3,10 @@
     top: 0;
 }
 
-@media (--s) {
-    .position {
-        top: auto;
-        position: fixed;
-        bottom: var(--static-space-24);
-    }
+.navLink {
+    border-radius: 8px;
+}
+
+.navLink:hover {
+    color: var(--neutral-on-background-strong) !important;
 }

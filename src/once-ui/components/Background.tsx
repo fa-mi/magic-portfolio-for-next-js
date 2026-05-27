@@ -57,10 +57,35 @@ const Background = forwardRef<HTMLDivElement, BackgroundProps>(({
                         zIndex: '0',
                         width: '100%',
                         height: '100%',
-                        filter: 'contrast(1.5)',
+                        filter: 'contrast(1.05)',
+                        opacity: '0.5',
                         background: 'radial-gradient(100% 100% at 49.99% 0%, var(--static-transparent) 0%, var(--page-background) 100%), radial-gradient(87.4% 84.04% at 6.82% 16.24%, var(--brand-background-medium) 0%, var(--static-transparent) 100%), radial-gradient(217.89% 126.62% at 48.04% 0%, var(--accent-solid-medium) 0%, var(--static-transparent) 100%)',
+                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%)',
                         ...style,
                     }}>
+                </div>
+            )}
+            {gradient && (
+                <div
+                    style={{
+                        position: position,
+                        top: '0',
+                        left: '0',
+                        zIndex: '0',
+                        width: '100%',
+                        height: '100%',
+                        overflow: 'hidden',
+                        pointerEvents: 'none',
+                    }}>
+                    <span
+                        className="blob blob-a"
+                        style={{ width: '42vw', height: '42vw', top: '-10%', left: '-8%' }}
+                    />
+                    <span
+                        className="blob blob-b"
+                        style={{ width: '36vw', height: '36vw', top: '34%', right: '-12%' }}
+                    />
                 </div>
             )}
             {dots && (

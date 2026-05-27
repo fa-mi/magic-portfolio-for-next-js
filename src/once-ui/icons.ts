@@ -17,7 +17,9 @@ import {
 	HiCheckCircle,
 	HiMiniGlobeAsiaAustralia,
 	HiEnvelope,
-	HiCalendarDays
+	HiCalendarDays,
+	HiCodeBracket,
+	HiArrowDownTray
 } from "react-icons/hi2";
 
 import {
@@ -33,7 +35,8 @@ import {
 	FaGithub,
 	FaLinkedin,
 	FaXTwitter,
-	FaInstagram
+	FaInstagram,
+	FaCode
 } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
@@ -63,4 +66,7 @@ export const iconLibrary: Record<string, IconType> = {
 	github: FaGithub,
 	linkedin: FaLinkedin,
 	instagram: FaInstagram,
+	x: FaXTwitter,
+	code: HiCodeBracket,
+	download: HiArrowDownTray,
 };

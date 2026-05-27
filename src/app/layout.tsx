@@ -8,6 +8,7 @@ import { Footer, Header, RouteGuard } from "@/app/components";
 import { baseURL, effects, home, person, style } from "@/app/resources";
 
 import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import { Source_Code_Pro } from "next/font/google";
 
 import { Metadata } from "next";
@@ -97,14 +98,13 @@ type FontConfig = {
   variable: string;
 };
 
-/*
-	Replace with code for secondary and tertiary fonts
-	from https://once-ui.com/customize
-*/
-const secondary: FontConfig | undefined = undefined;
+const secondary = Space_Grotesk({
+  variable: "--font-secondary",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const tertiary: FontConfig | undefined = undefined;
-/*
- */
 
 const code = Source_Code_Pro({
   variable: "--font-code",
@@ -151,7 +151,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           dots={effects.dots}
           lines={effects.lines}
         />
-        <Flex fillWidth minHeight="16"></Flex>
         <Header />
         <Flex
           zIndex={0}

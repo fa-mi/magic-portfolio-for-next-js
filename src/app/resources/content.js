@@ -7,7 +7,7 @@ const person = {
         return `${this.firstName} ${this.lastName}`;
     },
     role:      'Software Engineer',
-    avatar:    '/images/avatar-cgt.png',
+    avatar:    '/images/avatar-hero.png',
     location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
     languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
 }
@@ -47,8 +47,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Welcome to my site!</>,
-    subline: <>Explore my work, skills, and passion for creating innovative solutions.</>,
+    headline: <>Turning complex problems into simple solutions</>,
+    subline: <>I'm Fahmi, a {person.role} based in Jakarta. I design and build reliable digital products — from financial platforms to mobile apps.</>,
 }
 
 const about = {
@@ -273,7 +273,7 @@ const about = {
         ]
     },
     technical: {
-        display: false, // set to false to hide this section
+        display: true, // set to false to hide this section
         title: 'Technical skills',
         skills: [
             {

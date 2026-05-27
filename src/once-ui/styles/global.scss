@@ -82,14 +82,8 @@ a {
 }
 
 .project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 24px;
   overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .project-card img {
@@ -106,4 +100,87 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+}
+
+/* CLAYMORPHISM */
+.clay {
+  position: relative;
+  border-radius: 24px;
+  background: var(--surface-background);
+  border: 1px solid var(--neutral-alpha-weak);
+  box-shadow:
+    0 22px 48px -16px rgba(0, 0, 0, 0.6),
+    0 6px 14px -8px rgba(0, 0, 0, 0.45),
+    inset 0 2px 1px rgba(255, 255, 255, 0.07),
+    inset 0 -12px 28px -16px rgba(0, 0, 0, 0.55);
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.clay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 80% at 50% -10%,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.clay:hover {
+  box-shadow:
+    0 30px 60px -16px rgba(0, 0, 0, 0.65),
+    0 10px 20px -8px rgba(0, 0, 0, 0.5),
+    inset 0 2px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -12px 28px -16px rgba(0, 0, 0, 0.55),
+    0 0 0 1px var(--accent-alpha-weak);
+}
+
+/* FLOATING 3D BLOBS */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(28px);
+  opacity: 0.5;
+  pointer-events: none;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+.blob-a {
+  background: radial-gradient(
+    circle at 32% 28%,
+    var(--accent-solid-strong) 0%,
+    var(--accent-solid-medium) 45%,
+    transparent 72%
+  );
+  animation: blob-float-1 16s ease-in-out infinite;
+}
+
+.blob-b {
+  background: radial-gradient(
+    circle at 65% 35%,
+    var(--brand-solid-medium) 0%,
+    transparent 70%
+  );
+  animation: blob-float-2 22s ease-in-out infinite;
+}
+
+@keyframes blob-float-1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(24px, -32px, 0) scale(1.08); }
+  66% { transform: translate3d(-20px, 18px, 0) scale(0.95); }
+}
+
+@keyframes blob-float-2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-30px, -24px, 0) scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-a, .blob-b { animation: none; }
 }
