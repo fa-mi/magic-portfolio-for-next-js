@@ -1,10 +1,13 @@
 'use client';
 
-import React, { CSSProperties, useState, useRef, useEffect } from 'react';
+import React, { CSSProperties, useState, useRef, useEffect, useId } from 'react';
+import { createPortal } from 'react-dom';
 import Image, { ImageProps } from 'next/image';
 import classNames from 'classnames';
 
 import { Flex, Skeleton } from '@/once-ui/components';
+
+const ENLARGE_EVENT = 'smartimage:enlarge';
 
 export type SmartImageProps = ImageProps & {
     className?: string;
@@ -33,45 +36,61 @@ const SmartImage: React.FC<SmartImageProps> = ({
     ...props
 }) => {
     const [isEnlarged, setIsEnlarged] = useState(false);
+    const [mounted, setMounted] = useState(false);
+    const instanceId = useId();
     const imageRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const openEnlarged = () => {
+        // Notify other instances to close so only one preview is open at a time
+        window.dispatchEvent(
+            new CustomEvent(ENLARGE_EVENT, { detail: instanceId })
+        );
+        setIsEnlarged(true);
+    };
+
+    const closeEnlarged = () => setIsEnlarged(false);
+
     const handleClick = () => {
-        if (enlarge) {
-            setIsEnlarged(!isEnlarged);
+        if (!enlarge) return;
+        if (isEnlarged) {
+            closeEnlarged();
+        } else {
+            openEnlarged();
         }
     };
 
+    // Close when another image opens, and on Escape
+    useEffect(() => {
+        const onOtherOpen = (e: Event) => {
+            const detail = (e as CustomEvent).detail;
+            if (detail !== instanceId) setIsEnlarged(false);
+        };
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIsEnlarged(false);
+        };
+        window.addEventListener(ENLARGE_EVENT, onOtherOpen);
+        window.addEventListener('keydown', onKey);
+        return () => {
+            window.removeEventListener(ENLARGE_EVENT, onOtherOpen);
+            window.removeEventListener('keydown', onKey);
+        };
+    }, [instanceId]);
+
+    // Lock body scroll while enlarged
     useEffect(() => {
         if (isEnlarged) {
             document.body.style.overflow = 'hidden';
         } else {
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         }
-
         return () => {
-            document.body.style.overflow = 'auto';
+            document.body.style.overflow = '';
         };
     }, [isEnlarged]);
-
-    const calculateTransform = () => {
-        if (!imageRef.current) return {};
-
-        const rect = imageRef.current.getBoundingClientRect();
-        const scaleX = window.innerWidth / rect.width;
-        const scaleY = window.innerHeight / rect.height;
-        const scale = Math.min(scaleX, scaleY) * 0.9;
-
-        const translateX = (window.innerWidth - rect.width) / 2 - rect.left;
-        const translateY = (window.innerHeight - rect.height) / 2 - rect.top;
-
-        return {
-            transform: isEnlarged
-                ? `translate(${translateX}px, ${translateY}px) scale(${scale})`
-                : 'translate(0, 0) scale(1)',
-            transition: 'all 0.3s ease-in-out',
-            zIndex: isEnlarged ? 2 : 1,
-        };
-    };
 
     const isVideo = src.endsWith('.mp4');
 
@@ -81,7 +100,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
                 ref={imageRef}
                 fillWidth
                 position="relative"
-                {...(!isEnlarged && { background: 'neutral-medium' })}
+                background="neutral-medium"
                 style={{
                     outline: 'none',
                     overflow: 'hidden',
@@ -91,9 +110,8 @@ const SmartImage: React.FC<SmartImageProps> = ({
                         ? `${height}rem`
                         : '100%',
                     aspectRatio,
-                    cursor: enlarge ? 'pointer' : 'default',
-                    borderRadius: isEnlarged ? '0' : radius ? `var(--radius-${radius})` : undefined,
-                    ...calculateTransform(),
+                    cursor: enlarge ? 'zoom-in' : 'default',
+                    borderRadius: radius ? `var(--radius-${radius})` : undefined,
                     ...style,
                 }}
                 className={classNames(className)}
@@ -111,7 +129,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
                         style={{
                             width: '100%',
                             height: '100%',
-                            objectFit: isEnlarged ? 'contain' : objectFit,
+                            objectFit,
                         }}
                     />
                 )}
@@ -121,62 +139,87 @@ const SmartImage: React.FC<SmartImageProps> = ({
                         src={src}
                         alt={alt}
                         fill
-                        style={{ 
-                            objectFit: isEnlarged ? 'contain' : objectFit,
-                        }}
+                        style={{ objectFit }}
                     />
                 )}
             </Flex>
 
-            {isEnlarged && enlarge && (
-                <Flex
-                    justifyContent="center"
-                    alignItems="center"
-                    position="fixed"
-                    zIndex={1}
-                    onClick={handleClick}
+            {mounted && isEnlarged && enlarge && createPortal(
+                <div
+                    onClick={closeEnlarged}
+                    role="dialog"
+                    aria-modal="true"
                     style={{
-                        top: 0,
-                        left: 0,
-                        width: '100vw',
-                        height: '100vh',
-                        background: 'var(--backdrop)',
-                        cursor: 'pointer',
-                        transition: 'opacity 0.3s ease-in-out',
-                        opacity: isEnlarged ? 1 : 0,
+                        position: 'fixed',
+                        inset: 0,
+                        zIndex: 9999,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        padding: '4vmin',
+                        background: 'rgba(6, 6, 12, 0.88)',
+                        backdropFilter: 'blur(8px)',
+                        WebkitBackdropFilter: 'blur(8px)',
+                        cursor: 'zoom-out',
+                        animation: 'smartimage-fade 0.2s ease-out',
                     }}>
-                    <Flex
-                        position="relative"
+                    <button
+                        onClick={closeEnlarged}
+                        aria-label="Close preview"
                         style={{
-                            height: '100vh',
-                            transform: 'translate(-50%, -50%)',
-                        }}
-                        onClick={(e) => e.stopPropagation()}>
-                        {isVideo ? (
-                            <video
-                                src={src}
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                style={{ 
-                                    width: '90vw',
-                                    height: 'auto',
-                                    objectFit: 'contain',
-                                }}
-                            />
-                        ) : (
-                            <Image
-                                {...props}
-                                src={src}
-                                alt={alt}
-                                fill
-                                sizes="90vw"
-                                style={{ objectFit: 'contain' }}
-                            />
-                        )}
-                    </Flex>
-                </Flex>
+                            position: 'fixed',
+                            top: '20px',
+                            right: '24px',
+                            width: '40px',
+                            height: '40px',
+                            borderRadius: '50%',
+                            border: '1px solid rgba(255,255,255,0.2)',
+                            background: 'rgba(255,255,255,0.08)',
+                            color: '#fff',
+                            fontSize: '20px',
+                            lineHeight: 1,
+                            cursor: 'pointer',
+                        }}>
+                        ×
+                    </button>
+                    {isVideo ? (
+                        <video
+                            src={src}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            onClick={(e) => e.stopPropagation()}
+                            style={{
+                                maxWidth: '92vw',
+                                maxHeight: '90vh',
+                                objectFit: 'contain',
+                                borderRadius: '12px',
+                                boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
+                            }}
+                        />
+                    ) : (
+                        <img
+                            src={src}
+                            alt={alt}
+                            onClick={(e) => e.stopPropagation()}
+                            style={{
+                                maxWidth: '92vw',
+                                maxHeight: '90vh',
+                                objectFit: 'contain',
+                                borderRadius: '12px',
+                                boxShadow: '0 30px 80px rgba(0,0,0,0.6)',
+                            }}
+                        />
+                    )}
+                    <style>{`
+                        @keyframes smartimage-fade {
+                            from { opacity: 0; }
+                            to { opacity: 1; }
+                        }
+                    `}</style>
+                </div>,
+                document.body
             )}
         </>
     );

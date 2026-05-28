@@ -1,4 +1,4 @@
-import { Avatar, Button, Flex, Grid, Heading, Icon, SmartImage, Tag, Text } from '@/once-ui/components';
+import { Avatar, Button, Flex, Grid, Heading, Icon, LetterFx, SmartImage, Tag, Text } from '@/once-ui/components';
 import { person, about, social, baseURL } from '@/app/resources'
 import TableOfContents from '@/app/about/components/TableOfContents';
 import { TiltCard } from '@/app/components';
@@ -203,7 +203,9 @@ export default function About() {
                                 className={styles.textAlign}
                                 variant="display-default-xs"
                                 onBackground="neutral-weak">
-                                {person.role}
+                                <LetterFx trigger="instant" speed="medium">
+                                    {person.role}
+                                </LetterFx>
                             </Text>
                         </AnimateIn>
                         {social.length > 0 && (
