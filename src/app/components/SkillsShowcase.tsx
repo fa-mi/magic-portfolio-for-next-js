@@ -7,21 +7,26 @@ import {
   SiDart,
   SiPython,
   SiTypescript,
+  SiGo,
+  SiPhp,
   SiFlutter,
   SiReact,
   SiSupabase,
   SiFirebase,
+  SiSpringboot,
   SiPostgresql,
   SiMysql,
   SiApachekafka,
+  SiSap,
 } from "react-icons/si";
 
 const violetLight = "#a78bfa";
 
 interface Tech {
   name: string;
-  icon: IconType;
-  color: string;
+  icon?: IconType;
+  img?: string;
+  color?: string;
 }
 
 interface Category {
@@ -38,33 +43,45 @@ const categories: Category[] = [
       { name: "Dart", icon: SiDart, color: "#0175C2" },
       { name: "Python", icon: SiPython, color: "#3776AB" },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+      { name: "Go", icon: SiGo, color: "#00ADD8" },
+      { name: "PHP", icon: SiPhp, color: "#777BB4" },
     ],
   },
   {
-    title: "Mobile & Cloud",
+    title: "App & Backend",
     techs: [
       { name: "Flutter", icon: SiFlutter, color: "#02569B" },
       { name: "React Native", icon: SiReact, color: "#61DAFB" },
-      { name: "Supabase", icon: SiSupabase, color: "#3FCF8E" },
+      { name: "Spring Boot", icon: SiSpringboot, color: "#6DB33F" },
+      { name: "SwiftUI", img: "/images/logos/swiftui.svg" },
       { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+      { name: "Supabase", icon: SiSupabase, color: "#3FCF8E" },
     ],
+    tags: ["REST API"],
   },
   {
     title: "Data & Databases",
     techs: [
       { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
       { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+      { name: "Oracle", img: "/images/logos/oracle.svg" },
+      { name: "SQL Server", img: "/images/logos/sqlserver.svg" },
+      { name: "DB2", img: "/images/logos/db2.svg" },
       { name: "Apache Kafka", icon: SiApachekafka, color: "#ffffff" },
     ],
+    tags: ["SQL", "ETL / Data Pipeline"],
   },
   {
     title: "Business & Analytics",
+    techs: [
+      { name: "SAP", icon: SiSap, color: "#3AA9DC" },
+      { name: "Power BI", img: "/images/logos/powerbi.svg" },
+    ],
     tags: [
       "Business Analysis",
       "Business Intelligence",
-      "Power BI",
-      "SAP / ABAP",
       "Machine Learning",
+      "ABAP",
       "Problem Solving",
     ],
   },
@@ -133,6 +150,7 @@ export function SkillsShowcase() {
                         key={tech.name}
                         alignItems="center"
                         justifyContent="center"
+                        title={tech.name}
                         style={{
                           width: "48px",
                           height: "48px",
@@ -141,7 +159,19 @@ export function SkillsShowcase() {
                           border: "1px solid var(--neutral-alpha-weak)",
                         }}
                       >
-                        <Icon size={24} color={tech.color} title={tech.name} />
+                        {Icon ? (
+                          <Icon size={24} color={tech.color} title={tech.name} />
+                        ) : (
+                          <img
+                            src={tech.img}
+                            alt={tech.name}
+                            style={{
+                              width: "26px",
+                              height: "26px",
+                              objectFit: "contain",
+                            }}
+                          />
+                        )}
                       </Flex>
                     );
                   })}
