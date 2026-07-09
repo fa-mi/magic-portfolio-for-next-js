@@ -113,6 +113,7 @@ const about = {
                     <>Debit Card Inventory Third Party</>,
                     <>Debit Card Dynamic Currency Matching</>,
                     <>Card Management System</>,
+                    <>CAMS on Cloud – Migration of ODC Site from On-Premise to Google Cloud</>,
                     <>Reengineering Business Process Card Production</>
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
@@ -125,6 +126,12 @@ const about = {
                     {
                         src: '/images/projects/work/bri/cams.png',
                         alt: 'CAMS',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/cloud-migration.png',
+                        alt: 'CAMS on Cloud Migration',
                         width: 16,
                         height: 9
                     },
