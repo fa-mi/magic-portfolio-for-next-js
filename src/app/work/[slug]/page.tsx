@@ -80,6 +80,9 @@ export default function Project({ params }: WorkParams) {
   return date.toLowerCase().includes("coming");
 };
 
+	const projectLink = (post.metadata as Record<string, unknown>).link as string | undefined;
+	const isAppStore = projectLink?.includes("apps.apple.com");
+
 	return (
 		<Flex as="section"
 			fillWidth maxWidth="m"
@@ -123,10 +126,51 @@ export default function Project({ params }: WorkParams) {
 					prefixIcon="chevronLeft">
 					Projects
 				</Button>
-				<Heading
-					variant="display-strong-s">
-					{post.metadata.title}
-				</Heading>
+				<Flex direction="column" gap="12">
+					<Heading
+						variant="display-strong-s">
+						{post.metadata.title}
+					</Heading>
+					{projectLink && (
+						<Flex gap="12" alignItems="center">
+							{isAppStore && (
+								<div
+									style={{
+										display: "flex",
+										alignItems: "center",
+										gap: "5px",
+										background: "rgba(16, 185, 129, 0.1)",
+										border: "1px solid rgba(16, 185, 129, 0.4)",
+										borderRadius: "999px",
+										padding: "3px 12px",
+									}}
+								>
+									<span
+										style={{
+											width: "6px",
+											height: "6px",
+											borderRadius: "50%",
+											background: "#10b981",
+											boxShadow: "0 0 6px #10b981",
+											display: "inline-block",
+										}}
+									/>
+									<span style={{ fontSize: "0.72rem", fontWeight: 600, color: "#10b981", letterSpacing: "0.06em" }}>
+										LIVE
+									</span>
+								</div>
+							)}
+							<Button
+								href={projectLink}
+								variant="secondary"
+								size="s"
+								suffixIcon="arrowUpRight"
+								data-border="rounded">
+								{isAppStore ? "Download on App Store" : "Visit Website"}
+							</Button>
+						</Flex>
+					)}
+				</Flex>
 			</Flex>
 			{post.metadata.images.length > 0 && (
 				<SmartImage
@@ -150,8 +194,8 @@ export default function Project({ params }: WorkParams) {
 					)}
 					<Text variant="body-default-s" onBackground="neutral-weak">
 						{isComingSoon(post.metadata.publishedAt)
-							? "🚀 Coming Soon"
-							: post.metadata.publishedAt}
+							? "Coming Soon"
+							: formatDate(post.metadata.publishedAt)}
 					</Text>
 				</Flex>
 				<ScrollReveal>

@@ -95,39 +95,81 @@ export function HeroSection() {
         style={{ minWidth: "0" }}
       >
         <RevealFx translateY="2">
-          <Flex
-            alignItems="center"
-            gap="8"
-            paddingX="12"
-            paddingY="4"
-            radius="full"
-            style={{
-              border: "1px solid rgba(139, 92, 246, 0.35)",
-              background: "rgba(139, 92, 246, 0.08)",
-              width: "fit-content",
-            }}
-          >
-            <span
+          <Flex direction="column" gap="8">
+            <a
+              href="https://apps.apple.com/id/app/digital-pocket-id/id6762365322"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Flex
+                alignItems="center"
+                gap="8"
+                paddingX="12"
+                paddingY="4"
+                radius="full"
+                style={{
+                  border: "1px solid rgba(16, 185, 129, 0.4)",
+                  background: "rgba(16, 185, 129, 0.08)",
+                  width: "fit-content",
+                  cursor: "pointer",
+                  transition: "background 0.2s",
+                }}
+              >
+                <span
+                  style={{
+                    width: "7px",
+                    height: "7px",
+                    borderRadius: "50%",
+                    background: "#10b981",
+                    boxShadow: "0 0 8px #10b981",
+                  }}
+                />
+                <Text
+                  variant="label-default-s"
+                  style={{
+                    color: "#10b981",
+                    letterSpacing: "0.06em",
+                  }}
+                >
+                  DiPo is now live on the App Store →
+                </Text>
+              </Flex>
+            </a>
+            <Flex
+              alignItems="center"
+              gap="8"
+              paddingX="12"
+              paddingY="4"
+              radius="full"
               style={{
-                width: "8px",
-                height: "8px",
-                borderRadius: "50%",
-                background: violetLight,
-                boxShadow: `0 0 8px ${violet}`,
-              }}
-            />
-            <Text
-              variant="label-default-s"
-              style={{
-                color: violetLight,
-                textTransform: "uppercase",
-                letterSpacing: "0.14em",
+                border: "1px solid rgba(139, 92, 246, 0.35)",
+                background: "rgba(139, 92, 246, 0.08)",
+                width: "fit-content",
               }}
             >
-              <LetterFx trigger="instant" speed="medium">
-                {person.role}
-              </LetterFx>
-            </Text>
+              <span
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  borderRadius: "50%",
+                  background: violetLight,
+                  boxShadow: `0 0 8px ${violet}`,
+                }}
+              />
+              <Text
+                variant="label-default-s"
+                style={{
+                  color: violetLight,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.14em",
+                }}
+              >
+                <LetterFx trigger="instant" speed="medium">
+                  {person.role}
+                </LetterFx>
+              </Text>
+            </Flex>
           </Flex>
         </RevealFx>
 

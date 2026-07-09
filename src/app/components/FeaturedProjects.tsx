@@ -19,6 +19,8 @@ interface Project {
   tags: string[];
   href: string;
   image?: string;
+  appStoreUrl?: string;
+  isLive?: boolean;
 }
 
 const projects: Project[] = [
@@ -26,10 +28,12 @@ const projects: Project[] = [
     company: "Digital Pocket ID",
     title: "Digital Pocket ID (DiPo)",
     description:
-      "Co-founded a smart personal finance app that helps users manage money, optimize spending, and make smarter financial decisions.",
+      "Co-founded a smart personal finance iOS app with AI-powered budgeting, debt tracking, and saving goals. Now live on the App Store.",
     tags: ["Swift", "SwiftUI", "Firebase", "iOS"],
     href: "/work/dipo",
     image: "/images/projects/dipo/PortofolioMeetDiPo.png",
+    appStoreUrl: "https://apps.apple.com/id/app/digital-pocket-id/id6762365322",
+    isLive: true,
   },
   {
     company: "Bank Rakyat Indonesia",
@@ -176,16 +180,61 @@ export function FeaturedProjects() {
                 fillWidth
                 fillHeight
                 className="clay"
-                style={{ overflow: "hidden" }}
+                style={{
+                  overflow: "hidden",
+                  ...(project.isLive
+                    ? { border: "1px solid rgba(139, 92, 246, 0.5)", boxShadow: "0 0 24px -8px rgba(139, 92, 246, 0.4)" }
+                    : {}),
+                }}
               >
                 <div
                   style={{
                     width: "100%",
                     aspectRatio: "16 / 10",
                     overflow: "hidden",
+                    position: "relative",
                   }}
                 >
                   <ProjectThumb image={project.image} title={project.title} />
+                  {project.isLive && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "10px",
+                        right: "10px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "5px",
+                        background: "rgba(16, 185, 129, 0.15)",
+                        border: "1px solid rgba(16, 185, 129, 0.5)",
+                        borderRadius: "999px",
+                        padding: "3px 10px",
+                        backdropFilter: "blur(8px)",
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: "6px",
+                          height: "6px",
+                          borderRadius: "50%",
+                          background: "#10b981",
+                          boxShadow: "0 0 6px #10b981",
+                          display: "inline-block",
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontSize: "0.68rem",
+                          fontWeight: 600,
+                          color: "#10b981",
+                          letterSpacing: "0.08em",
+                          textTransform: "uppercase",
+                        }}
+                      >
+                        Live on App Store
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <Flex direction="column" gap="12" padding="l" fillHeight>
                   <Text
@@ -207,7 +256,7 @@ export function FeaturedProjects() {
                       </Tag>
                     ))}
                   </Flex>
-                  <Flex style={{ marginTop: "auto", paddingTop: "8px" }}>
+                  <Flex gap="12" style={{ marginTop: "auto", paddingTop: "8px" }} wrap>
                     <SmartLink href={project.href}>
                       <Flex alignItems="center" gap="4">
                         <Text
@@ -219,6 +268,19 @@ export function FeaturedProjects() {
                         <Text style={{ color: violetLight }}>↗</Text>
                       </Flex>
                     </SmartLink>
+                    {project.appStoreUrl && (
+                      <SmartLink href={project.appStoreUrl}>
+                        <Flex alignItems="center" gap="4">
+                          <Text
+                            variant="body-default-s"
+                            style={{ color: "#10b981", fontWeight: 500 }}
+                          >
+                            App Store
+                          </Text>
+                          <Text style={{ color: "#10b981" }}>↗</Text>
+                        </Flex>
+                      </SmartLink>
+                    )}
                   </Flex>
                 </Flex>
               </Flex>

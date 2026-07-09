@@ -71,8 +71,8 @@ const about = {
         title: 'Introduction',
         description: 
         <>
-            <p>I am a Jakarta-based {person.role} with a passion for transforming <b> complex business requirements</b> challenges into <b>simple and comprehensive solutions</b>.</p>
-            <p>My work spans a diverse range of disciplines, from crafting intuitive digital interfaces to analyzing <b>business process</b> able to meets <b>customers needs</b>. I’m particularly interested in the intersection of <b>analysis</b> and <b>engineering</b>, where technology meet functionality. I believe that the best solutions arise from a balance of creativity and technical rigor, and I enjoy the challenge of finding that balance in every project I undertake.</p>
+            <p>I'm a {person.role} based in Jakarta, and what genuinely gets me excited is taking a messy, complicated business problem and untangling it into something <b>simple people can actually use</b>.</p>
+            <p>Over the years I've moved between crafting interfaces people enjoy using and digging into <b>business processes</b> to understand what customers actually need — not just what they say they need. That's where I do my best work: the space where <b>analysis</b> meets <b>engineering</b>, where a good idea has to prove itself by actually functioning. I've learned that the strongest solutions come from balancing creativity with technical discipline, and honestly, chasing that balance is still my favorite part of the job.</p>
         </>
     },
     work: {
@@ -82,15 +82,22 @@ const about = {
             {
                 company: 'Digital Pocket ID',
                 timeframe: '2026',
-                role: 'Co-Founder',
+                role: 'Co-Founder & Product Engineer',
                 achievements: [
-                    <>A smart personal finance app that helps users manage money, optimize spending, and make smarter financial decisions effortlessly.</>,
-                    <>Check this out: <a href="http://dipo.info" target="_blank" rel="noopener noreferrer">Click here</a></>
+                    <>Built and shipped DiPo — an AI-powered personal finance iOS app with Smart Budget, Smart Debt, and Saving Goals features.</>,
+                    <>Now live on the App Store: <a href="https://apps.apple.com/id/app/digital-pocket-id/id6762365322" target="_blank" rel="noopener noreferrer">Download DiPo</a></>,
+                    <>Tech stack: Swift, SwiftUI, Firebase, Core Data</>
                 ],
                 images: [
                     {
                         src: '/images/projects/dipo/PortofolioMeetDiPo.png',
                         alt: 'DiPo App',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/dipo/PortofolioSmartBudget.png',
+                        alt: 'DiPo Smart Budget',
                         width: 16,
                         height: 9
                     },
