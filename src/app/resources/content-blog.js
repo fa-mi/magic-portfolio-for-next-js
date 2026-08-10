@@ -101,6 +101,7 @@ const about = {
                 timeframe: '2023 - Present',
                 role: 'Junior Manager',
                 achievements: [
+                    <>CAMS on Cloud</>,
                     <>Stream Data Pipeline of One Single Truth Data Platform</>,
                     <>Card Activation on Project Government Social Aid</>,
                     <>Brizzi Card Sale Branch Office</>,

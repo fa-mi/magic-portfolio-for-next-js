@@ -356,6 +356,34 @@ export default function About() {
                                                 </Flex>
                                                 <Tag size="s">{experience.timeframe}</Tag>
                                             </Flex>
+                                            {experience.highlight && (
+                                                <Flex
+                                                    direction="column"
+                                                    gap="8"
+                                                    padding="m"
+                                                    radius="m"
+                                                    background="accent-weak"
+                                                    border="accent-medium"
+                                                    borderStyle="solid-1"
+                                                    marginTop="8">
+                                                    <Flex alignItems="center" gap="8">
+                                                        <Tag size="s" variant="accent">Main Highlight</Tag>
+                                                    </Flex>
+                                                    <Text variant="heading-strong-s">
+                                                        {experience.highlight.title}
+                                                    </Text>
+                                                    <Text variant="body-default-s" onBackground="neutral-weak">
+                                                        {experience.highlight.description}
+                                                    </Text>
+                                                    {experience.highlight.tags && experience.highlight.tags.length > 0 && (
+                                                        <Flex gap="8" wrap paddingTop="4">
+                                                            {experience.highlight.tags.map((tag: string, tagIdx: number) => (
+                                                                <Tag key={tagIdx} size="s">{tag}</Tag>
+                                                            ))}
+                                                        </Flex>
+                                                    )}
+                                                </Flex>
+                                            )}
                                             <CollapsibleAchievements
                                                 achievements={experience.achievements}
                                                 company={experience.company} />
