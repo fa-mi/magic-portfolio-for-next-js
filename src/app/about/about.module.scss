@@ -6,6 +6,21 @@
     }
 }
 
+// The table of contents is position: fixed, so it has to fit in the empty
+// space left of the centered content. Drop the sub-items first, then the
+// whole list, as that space shrinks.
+@media (max-width: 1480px) {
+    .tocSubItem {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .tableOfContents {
+        display: none !important;
+    }
+}
+
 @media (--s) {
     .textAlign {
         text-align: center;

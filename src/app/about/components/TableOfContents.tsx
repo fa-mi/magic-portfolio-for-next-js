@@ -36,6 +36,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
 
     return (
         <Flex
+            className={styles.tableOfContents}
             style={{
                 left: '0',
                 top: '50%',
@@ -69,7 +70,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                                 <Flex
                                     key={itemIndex}
                                     style={{ cursor: 'pointer' }}
-                                    className={styles.hover}
+                                    className={`${styles.hover} ${styles.tocSubItem}`}
                                     gap="12" paddingLeft="24"
                                     alignItems="center"
                                     onClick={() => scrollTo(item, 80)}>
