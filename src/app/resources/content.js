@@ -101,6 +101,18 @@ const about = {
                         width: 16,
                         height: 9
                     },
+                    {
+                        src: '/images/projects/dipo/PortofolioSmartDebt.png',
+                        alt: 'DiPo Smart Debt',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/dipo/PortofolioSavingGoals.png',
+                        alt: 'DiPo Saving Goals',
+                        width: 16,
+                        height: 9
+                    },
                  ]
             },
             {
