@@ -160,6 +160,12 @@ export default function About() {
                                 ))}
                             </Flex>
                         )}
+                        { about.tableOfContent.display && (
+                            <TableOfContents
+                                variant="inline"
+                                structure={structure}
+                                about={about} />
+                        )}
                     </Flex>
                 )}
                 <Flex

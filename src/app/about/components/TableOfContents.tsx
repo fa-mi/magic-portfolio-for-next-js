@@ -16,9 +16,13 @@ interface TableOfContentsProps {
             subItems: boolean;
         };
     };
+    // 'fixed' floats at the left edge of wide screens; 'inline' sits sticky in
+    // the avatar column on tablets and small laptops, where 'fixed' has no room.
+    variant?: 'fixed' | 'inline';
 }
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) => {
+const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about, variant = 'fixed' }) => {
+    const inline = variant === 'inline';
     const scrollTo = (id: string, offset: number) => {
         const element = document.getElementById(id);
         if (element) {
@@ -36,15 +40,17 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
 
     return (
         <Flex
-            className={styles.tableOfContents}
-            style={{
+            className={inline ? styles.tocInline : styles.tableOfContents}
+            style={inline ? undefined : {
                 left: '0',
                 top: '50%',
                 transform: 'translateY(-50%)',
                 whiteSpace: 'nowrap'
             }}
-            position="fixed"
-            paddingLeft="24" gap="32"
+            position={inline ? undefined : 'fixed'}
+            paddingLeft={inline ? undefined : '24'}
+            gap={inline ? '24' : '32'}
+            fillWidth={inline}
             direction="column" hide="s">
             {structure
                 .filter(section => section.display)
@@ -58,6 +64,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                         onClick={() => scrollTo(section.title, 80)}>
                         <Flex
                             height="1" width="16"
+                            style={{ flexShrink: 0 }}
                             background="neutral-strong">
                         </Flex>
                         <Text>
@@ -70,12 +77,13 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
                                 <Flex
                                     key={itemIndex}
                                     style={{ cursor: 'pointer' }}
-                                    className={`${styles.hover} ${styles.tocSubItem}`}
+                                    className={styles.hover}
                                     gap="12" paddingLeft="24"
                                     alignItems="center"
                                     onClick={() => scrollTo(item, 80)}>
                                     <Flex
                                         height="1" width="8"
+                                        style={{ flexShrink: 0 }}
                                         background="neutral-strong">
                                     </Flex>
                                     <Text>
