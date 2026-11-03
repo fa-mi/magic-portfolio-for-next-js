@@ -128,8 +128,7 @@ const about = {
                     <>Card Management System (CAMS) — core platform for debit card issuance & lifecycle</>,
                     <>CAMS on Cloud — led migration of CAMS to cloud infrastructure</>,
                     <>Debit Card Activation on Project Government Social Aid (CAMS)</>,
-                    <>Debit Card Request on BRIMO (CAMS)</>,
-                    <>Debit Card Request from Qita via BRI</>,
+                    <>Debit Card Request on Qita by BRI (CAMS)</>,
                     <>Debit Card Contactless on BRIMO (CAMS)</>,
                     <>Debit Card Channel Activation (CAMS)</>,
                     <>Debit Card Inventory Transfer Branch Office (CAMS)</>,
@@ -192,7 +191,7 @@ const about = {
                     },
                     {
                         src: '/images/projects/work/bri/qita-card-request.png',
-                        alt: 'Debit Card Request from Qita via BRI',
+                        alt: 'Debit Card Request on Qita by BRI',
                         width: 16,
                         height: 9
                     },
