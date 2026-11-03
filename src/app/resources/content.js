@@ -131,11 +131,11 @@ const about = {
                     <>Debit Card Request on Qita by BRI (CAMS)</>,
                     <>Debit Card Contactless on BRIMO (CAMS)</>,
                     <>Debit Card Channel Activation (CAMS)</>,
-                    <>Debit Card Inventory Transfer Branch Office (CAMS)</>,
+                    <>Debit Card Inventory Transfer Branch Office</>,
                     <>Debit Card Inventory Third Party (CAMS)</>,
                     <>Debit Card Dynamic Currency Matching (CAMS)</>,
                     <>NFC Payment using Tokenize Technology (CAMS)</>,
-                    <>Brizzi Card Sale Branch Office (CAMS)</>,
+                    <>Brizzi Card Sale Branch Office</>,
                     <>Stream Data Pipeline of One Single Truth Data Platform</>,
                     <>Data Stream Kafka</>,
                     <>Reengineering Business Process Card Production</>
