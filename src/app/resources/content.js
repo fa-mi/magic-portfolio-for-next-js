@@ -132,7 +132,7 @@ const about = {
                     <>Debit Card Contactless on BRIMO (CAMS)</>,
                     <>Debit Card Channel Activation (CAMS)</>,
                     <>Debit Card Inventory Transfer Branch Office</>,
-                    <>Debit Card Inventory Third Party (CAMS)</>,
+                    <>Debit Card Inventory Third Party</>,
                     <>Debit Card Dynamic Currency Matching (CAMS)</>,
                     <>NFC Payment using Tokenize Technology (CAMS)</>,
                     <>Brizzi Card Sale Branch Office</>,
