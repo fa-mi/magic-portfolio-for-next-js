@@ -184,12 +184,6 @@ const about = {
                         height: 9
                     },
                     {
-                        src: '/images/projects/work/bri/request-card.png',
-                        alt: 'Debit Card Request',
-                        width: 16,
-                        height: 9
-                    },
-                    {
                         src: '/images/projects/work/bri/qita-card-request.png',
                         alt: 'Debit Card Request on Qita by BRI',
                         width: 16,

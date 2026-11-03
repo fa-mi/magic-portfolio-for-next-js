@@ -154,12 +154,6 @@ const about = {
                         height: 9
                     },
                     {
-                        src: '/images/projects/work/bri/request-card.png',
-                        alt: 'Debit Card Request',
-                        width: 16,
-                        height: 9
-                    },
-                    {
                         src: '/images/projects/work/bri/kafka.png',
                         alt: 'Kafka',
                         width: 16,
