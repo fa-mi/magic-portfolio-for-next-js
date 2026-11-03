@@ -196,12 +196,6 @@ const about = {
                         height: 9
                     },
                     {
-                        src: '/images/projects/work/bri/qita-logo.png',
-                        alt: 'Qita by BRI',
-                        width: 16,
-                        height: 9
-                    },
-                    {
                         src: '/images/projects/work/bri/kafka.png',
                         alt: 'Kafka',
                         width: 16,
