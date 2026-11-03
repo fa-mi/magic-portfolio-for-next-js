@@ -135,6 +135,7 @@ const about = {
                     <>Debit Card Inventory Third Party</>,
                     <>Debit Card Dynamic Currency Matching (CAMS)</>,
                     <>NFC Payment using Tokenize Technology (CAMS)</>,
+                    <>Visa Click to Pay on Debit Virtual BRI (CAMS)</>,
                     <>Brizzi Card Sale Branch Office</>,
                     <>Stream Data Pipeline of One Single Truth Data Platform</>,
                     <>Data Stream Kafka</>,
@@ -186,6 +187,24 @@ const about = {
                     {
                         src: '/images/projects/work/bri/qita-card-request.png',
                         alt: 'Debit Card Request on Qita by BRI',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/visa-click-to-pay-hero.jpg',
+                        alt: 'Visa Click to Pay on Debit Virtual BRI',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/visa-click-to-pay-activation.jpg',
+                        alt: 'Visa Click to Pay activation with OTP',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/work/bri/visa-click-to-pay-security.jpg',
+                        alt: 'Visa Click to Pay card data security',
                         width: 16,
                         height: 9
                     },
