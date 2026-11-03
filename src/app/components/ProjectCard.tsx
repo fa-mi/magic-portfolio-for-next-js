@@ -3,7 +3,8 @@
 import { AvatarGroup, Flex, Heading, SmartLink, Text } from "@/once-ui/components";
 import { useEffect, useState } from "react";
 import ParallaxImage from "./ParallaxImage";
-import { TiltCard } from "./TiltCard";
+import { HoverLift } from "./HoverLift";
+import { EASE_LUXE_CSS } from "./motion";
 
 interface ProjectCardProps {
     href: string;
@@ -44,7 +45,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     const descriptionItems = description?.split("\n") || [];
 
     return (
-        <TiltCard className="clay" intensity={5}>
+        <HoverLift className="clay">
         <Flex
             fillWidth
             direction="column"
@@ -63,7 +64,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                     cursor: images.length > 1 ? 'pointer' : 'default',
                     overflow: 'hidden',
                     borderRadius: '24px',
-                    transform: 'translateZ(40px)',
                 }}
             >
                 <ParallaxImage src={images[activeIndex]} />
@@ -79,8 +79,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 <div
                     style={{
                         opacity: visible ? 1 : 0,
-                        transform: visible ? "translateY(0)" : "translateY(20px)",
-                        transition: "all 0.5s ease",
+                        transform: visible ? "translateY(0)" : "translateY(12px)",
+                        transition: `opacity 0.9s ${EASE_LUXE_CSS}, transform 0.9s ${EASE_LUXE_CSS}`,
                     }}
                 >
                     <Heading
@@ -100,8 +100,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                 key={i}
                                 style={{
                                     opacity: visible ? 1 : 0,
-                                    transform: visible ? "translateY(0)" : "translateY(16px)",
-                                    transition: `all 0.5s ease ${i * 0.08}s`,
+                                    transform: visible ? "translateY(0)" : "translateY(10px)",
+                                    transition: `opacity 0.9s ${EASE_LUXE_CSS} ${i * 0.08}s, transform 0.9s ${EASE_LUXE_CSS} ${i * 0.08}s`,
                                 }}
                             >
                                 <Text
@@ -131,8 +131,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                                     key={i}
                                     style={{
                                         opacity: visible ? 1 : 0,
-                                        transform: visible ? "translateY(0)" : "translateY(10px)",
-                                        transition: `all 0.4s ease ${i * 0.05}s`,
+                                        transform: visible ? "translateY(0)" : "translateY(8px)",
+                                        transition: `opacity 0.9s ${EASE_LUXE_CSS} ${i * 0.05}s, transform 0.9s ${EASE_LUXE_CSS} ${i * 0.05}s`,
                                     }}
                                 >
                                     <img
@@ -152,8 +152,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                     <div
                         style={{
                             opacity: visible ? 1 : 0,
-                            transform: visible ? "translateY(0)" : "translateY(10px)",
-                            transition: "all 0.5s ease 0.2s",
+                            transform: visible ? "translateY(0)" : "translateY(8px)",
+                            transition: `opacity 0.9s ${EASE_LUXE_CSS} 0.2s, transform 0.9s ${EASE_LUXE_CSS} 0.2s`,
                         }}
                     >
                         <SmartLink href={href}>
@@ -171,6 +171,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 </Flex>
             </Flex>
         </Flex>
-        </TiltCard>
+        </HoverLift>
     );
 };

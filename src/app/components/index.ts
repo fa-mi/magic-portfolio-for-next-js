@@ -1,7 +1,7 @@
 export { Header } from '@/app/components/Header'
 export { Footer } from '@/app/components/Footer'
 export { ProjectCard } from '@/app/components/ProjectCard'
-export { TiltCard } from '@/app/components/TiltCard'
+export { HoverLift } from '@/app/components/HoverLift'
 export { HeroSection } from '@/app/components/HeroSection'
 export { ValueCards } from '@/app/components/ValueCards'
 export { FeaturedProjects } from '@/app/components/FeaturedProjects'

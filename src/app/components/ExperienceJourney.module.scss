@@ -66,7 +66,7 @@
   right: 28px;
   width: 124px;
   height: 124px;
-  animation: planet-float 8s ease-in-out infinite;
+  animation: planet-float 14s ease-in-out infinite;
 }
 
 .planet {
@@ -127,7 +127,7 @@
   border-radius: 50%;
   background: #ffffff;
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
-  animation: twinkle 3s ease-in-out infinite;
+  animation: twinkle 5s ease-in-out infinite;
 }
 
 @keyframes planet-float {
@@ -136,7 +136,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
   }
 }
 
@@ -144,11 +144,9 @@
   0%,
   100% {
     opacity: 0.25;
-    transform: scale(0.8);
   }
   50% {
-    opacity: 1;
-    transform: scale(1.2);
+    opacity: 0.85;
   }
 }
 

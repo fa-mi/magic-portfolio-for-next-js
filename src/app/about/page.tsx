@@ -1,7 +1,7 @@
-import { Avatar, Button, Flex, Grid, Heading, Icon, LetterFx, SmartImage, Tag, Text } from '@/once-ui/components';
+import { Avatar, Button, Flex, Grid, Heading, Icon, SmartImage, Tag, Text } from '@/once-ui/components';
 import { person, about, social, baseURL } from '@/app/resources'
 import TableOfContents from '@/app/about/components/TableOfContents';
-import { TiltCard } from '@/app/components';
+import { HoverLift } from '@/app/components';
 import styles from '@/app/about/about.module.scss'
 import AnimateIn, { AvatarMotion } from '@/app/about/components/AnimateIn';
 import CollapsibleAchievements from '@/app/about/components/CollapsibleAchievements';
@@ -209,9 +209,7 @@ export default function About() {
                                 className={styles.textAlign}
                                 variant="display-default-xs"
                                 onBackground="neutral-weak">
-                                <LetterFx trigger="instant" speed="medium">
-                                    {person.role}
-                                </LetterFx>
+                                {person.role}
                             </Text>
                         </AnimateIn>
                         {social.length > 0 && (
@@ -262,7 +260,7 @@ export default function About() {
                                 fillWidth gap="m" marginBottom="40">
                                 {about.studies.institutions.map((institution, index) => (
                                     <AnimateIn key={`${institution.name}-${index}`} delay={index * 0.08}>
-                                        <TiltCard intensity={4}>
+                                        <HoverLift>
                                         <Flex
                                             fillWidth gap="8"
                                             padding="l"
@@ -308,7 +306,7 @@ export default function About() {
                                                 </Flex>
                                             )}
                                         </Flex>
-                                        </TiltCard>
+                                        </HoverLift>
                                     </AnimateIn>
                                 ))}
                             </Flex>
@@ -333,7 +331,7 @@ export default function About() {
                                 fillWidth gap="m" marginBottom="40">
                                 {about.work.experiences.map((experience, index) => (
                                     <AnimateIn key={`${experience.company}-${index}`} delay={index * 0.08}>
-                                        <TiltCard intensity={4}>
+                                        <HoverLift>
                                         <Flex
                                             fillWidth
                                             padding="l"
@@ -416,7 +414,7 @@ export default function About() {
                                                 </Flex>
                                             )}
                                         </Flex>
-                                        </TiltCard>
+                                        </HoverLift>
                                     </AnimateIn>
                                 ))}
                             </Flex>
@@ -444,7 +442,7 @@ export default function About() {
                                 marginBottom="40">
                                 {about.technical.skills.map((skill, index) => (
                                     <AnimateIn key={`${skill.title}-${index}`} delay={index * 0.06}>
-                                        <TiltCard intensity={4}>
+                                        <HoverLift>
                                             <Flex
                                                 fillWidth fillHeight gap="8"
                                                 padding="l"
@@ -464,7 +462,7 @@ export default function About() {
                                                     {skill.description}
                                                 </Text>
                                             </Flex>
-                                        </TiltCard>
+                                        </HoverLift>
                                     </AnimateIn>
                                 ))}
                             </Grid>
@@ -489,7 +487,7 @@ export default function About() {
                                 fillWidth gap="m">
                                 {about.achievements.skills.map((skill, index) => (
                                     <AnimateIn key={`${skill.title}-${index}`} delay={index * 0.08}>
-                                        <TiltCard intensity={4}>
+                                        <HoverLift>
                                         <Flex
                                             fillWidth gap="s"
                                             padding="l"
@@ -540,7 +538,7 @@ export default function About() {
                                                 </Flex>
                                             )}
                                         </Flex>
-                                        </TiltCard>
+                                        </HoverLift>
                                     </AnimateIn>
                                 ))}
                             </Flex>

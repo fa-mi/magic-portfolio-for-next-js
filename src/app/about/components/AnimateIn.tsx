@@ -1,13 +1,17 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
+import { EASE_LUXE } from '@/app/components/motion';
 
 export function AvatarMotion({ children }: { children: React.ReactNode }) {
+  const reduceMotion = useReducedMotion();
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+      initial={reduceMotion ? false : { opacity: 0, scale: 0.97, filter: 'blur(8px)' }}
+      // Drop the filter once done: a leftover filter on an ancestor breaks
+      // position: fixed descendants such as enlarged images.
+      animate={{ opacity: 1, scale: 1, filter: 'blur(0px)', transitionEnd: { filter: 'none' } }}
+      transition={{ duration: 1.2, ease: EASE_LUXE }}
     >
       {children}
     </motion.div>
@@ -17,20 +21,21 @@ export function AvatarMotion({ children }: { children: React.ReactNode }) {
 export default function AnimateIn({
   children,
   delay = 0,
-  y = 20,
+  y = 12,
 }: {
   children: React.ReactNode;
   delay?: number;
   y?: number;
 }) {
+  const reduceMotion = useReducedMotion();
   return (
     <motion.div
-      initial={{ opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
+      initial={reduceMotion ? false : { opacity: 0, y, filter: 'blur(4px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)', transitionEnd: { filter: 'none' } }}
+      viewport={{ once: true, margin: '-60px' }}
       transition={{
-        duration: 0.6,
-        ease: 'easeOut',
+        duration: 1,
+        ease: EASE_LUXE,
         delay,
       }}
     >

@@ -6,7 +6,6 @@ import {
   Button,
   IconButton,
   RevealFx,
-  LetterFx,
 } from "@/once-ui/components";
 import { person } from "@/app/resources";
 
@@ -165,9 +164,7 @@ export function HeroSection() {
                   letterSpacing: "0.14em",
                 }}
               >
-                <LetterFx trigger="instant" speed="medium">
-                  {person.role}
-                </LetterFx>
+                {person.role}
               </Text>
             </Flex>
           </Flex>

@@ -7,7 +7,7 @@ import {
   Tag,
   SmartLink,
 } from "@/once-ui/components";
-import { TiltCard } from "@/app/components/TiltCard";
+import { HoverLift } from "@/app/components/HoverLift";
 import AnimateIn from "@/app/about/components/AnimateIn";
 
 const violetLight = "#a78bfa";
@@ -174,7 +174,7 @@ export function FeaturedProjects() {
               display: "flex",
             }}
           >
-            <TiltCard intensity={4} style={{ width: "100%", display: "flex" }}>
+            <HoverLift style={{ width: "100%", display: "flex" }}>
               <Flex
                 direction="column"
                 fillWidth
@@ -284,7 +284,7 @@ export function FeaturedProjects() {
                   </Flex>
                 </Flex>
               </Flex>
-            </TiltCard>
+            </HoverLift>
           </div>
         ))}
       </div>
